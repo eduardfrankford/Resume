@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Eduard Frankford</title>
+    <meta name="description"
+        content="Computer science master student with experience in Java, JavaScript, PHP, MySQL, HTML, and CSS." />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/mac.css" rel="stylesheet" />
+    <link href="css/app.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1><img src="img/me.jpg" /> <br>Eduard Frankford</h1>
+            <nav>
+                <ul>
+                    <li><a href="#" title="open ~/">home</a></li>
+                    <li><a href="#" title="open ~/about">about</a></li>
+                    <li><a href="#" title="open ~/projects">projects</a></li>
+                    <li><a href="eduard-frankford.pdf" title="open ~/resume">resume</a></li>
+                    <li><a href="#" title="open ~/contact">contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="terminal mac-window">
+            <div class="titlebar">
+                <div class="buttons">
+                    <div class="close" data-color="red"><span>&times;</span></div>
+                    <div class="minimize" data-color="yellow"><span>&ndash;</span></div>
+                    <div class="zoom" data-color="green"><span>+</span></div>
+                </div>
+                Terminal &mdash; bash <span id="current-directory">~</span>
+            </div>
+            <div class="content" id="window">
+                <div id="output">Hello! Navigate by entering commands or clicking on links above<br><span
+                        id="default-output">Type <span class="blue">ls</span> for item listing, or <span
+                            class="blue">help</span> for a list of commands<br></span></div>
+                <div class="command-input">
+                    $ <input type="text" id="command" spellcheck="false" autocomplete="false" autocorrect="off"
+                        autocapitalize="off" />
+                </div>
+            </div>
+        </div>
+
+        <!-- hidden, used in terminal -->
+        <div class="pages">
+            <div id="about">
+                <b>:: About Me ::</b>
+                Hello! I'm a 24 year old student studying in the Master Computer Science at Innsbruck University with
+                experience in Java, JavaScript, SQL and Angular. 
+
+                I enjoy biking, surfing, taekwondo and working on side projects.
+            </div>
+            <div id="contact">
+                <b>:: Contact Info ::</b>
+                let's get in touch!
+                email= <a href="mailto:eduard.frankford@gmail.com">eduard.frankford@gmail.com</a>
+                github= <a href="http://github.com/eduardfrankford">eduardfrankford</a>
+                linked_in= <a href="https://www.linkedin.com/in/eduard-frankford/">Eduard Frankford</a>
+                stack_overflow= <a href="https://stackoverflow.com/users/14551409/eduard-frankford">14551409/eduard</a>
+            </div>
+            <div id="site-info">
+                <b>:: Site Info ::</b>
+                Built with JavaScript, with a hint of jQuery
+                Webpack for module bundling and ES6 transpiling
+                NPM for JS dependency management
+                Hosted on Netlify
+            </div>
+            <h4>Projects</h4>
+            <div id="project-frankfordtaekwondo">
+                <b>Frankford-Taekwondo</b> <a href="https://www.frankford-taekwondo.at/" target="_blank">Website</a> 
+               A website that I made for my Taekwondo club
+            </div>
+            <div id="project-codeAbility">
+                <b>CodeAbility</b> <a href="https://sharing.codeability-austria.uibk.ac.at/static/SharingCodeAbility.html" target="_blank">Website</a> 
+               A website I am working on as an employee of the University of Innsbruck
+            </div>
+        </div>
+
+        <footer>
+            { <a href="">view source : <b>github</b></a> }
+        </footer>
+
+        <div class="mac-window" id="resume-viewer-container">
+            <div class="titlebar">
+                <div class="buttons">
+                    <div class="close" id="resume-close"><span>&times;</span></div>
+                    <div class="minimize"><span>&ndash;</span></div>
+                    <div class="zoom"><span>+</span></div>
+                </div>
+                Eduard's resume
+            </div>
+            <div class="content">
+                <a href="eduard-frankford.pdf" class="download"><b>click to download pdf</b></a>
+                <div id="resume-viewer"></div>
+            </div>
+        </div>
+
+    </div>
+    <!--/.container-->
+
+    <script src="dist/bundle.js"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-46634635-6"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-46634635-6');
+    </script> -->
+
+</body>
+
+</html>
