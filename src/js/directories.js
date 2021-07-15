@@ -15,6 +15,15 @@ export default {
                 contents: '#project-codeAbility'
             }
         },
+        notes: {
+            items: [  'erasmussevilla', 'erasmusnorway' ],
+            erasmussevilla: {
+                contents: '#erasmussevilla'
+            },
+            erasmusnorway: {
+                contents: '#erasmusnorway'
+            }
+        },
         resume: {
             execute: openResume
         },

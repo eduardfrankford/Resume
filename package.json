@@ -1,5 +1,5 @@
 {
-  "name": "nathanieljohnson.me",
+  "name": "eduardfrankford.com",
   "version": "1.0.0",
   "description": "Personal website",
   "main": "index.js",
@@ -10,15 +10,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nathan815/site.git"
+    "url": "git+https://github.com/eduardfrankford/Resume"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/nathan815/site/issues"
+    "url": "https://github.com/eduardfrankford/Resume/issues"
   },
-  "homepage": "http://nathanieljohnson.me",
+  "homepage": "http://eduardfrankford.com",
   "devDependencies": {
     "@webpack-cli/serve": "^1.5.1",
     "babel-core": "^6.26.0",

@@ -65,6 +65,7 @@ const openPage = function(page) {
         case 'projects':
         case 'about':
         case 'resume':
+        case 'notes':
         case 'contact':
             let prefix = Directory.current != '~' ? '~/' : '';
             triggerCommand('open ' + prefix + page);
