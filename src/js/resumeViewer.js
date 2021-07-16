@@ -18,3 +18,7 @@ export const openResume = function() {
         fallbackLink: "<p>This browser does not support inline PDFs. <a href='[url]'>Click To View PDF &raquo;</a></p>"
     });
 };
+
+export const openNotes = function() {
+    window.open("/blog.html", '_blank');
+};

@@ -1,4 +1,4 @@
-import { openResume } from './resumeViewer';
+import { openResume, openNotes } from './resumeViewer';
 
 export default {
     '~': {
@@ -16,13 +16,7 @@ export default {
             }
         },
         notes: {
-            items: [  'erasmussevilla', 'erasmusnorway' ],
-            erasmussevilla: {
-                contents: '#erasmussevilla'
-            },
-            erasmusnorway: {
-                contents: '#erasmusnorway'
-            }
+            execute: openNotes
         },
         resume: {
             execute: openResume
