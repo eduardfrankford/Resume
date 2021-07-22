@@ -10850,3 +10850,7 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+
+.instagram-media {
+  margin: auto !important; 
+}
