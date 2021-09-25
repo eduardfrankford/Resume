@@ -1,11 +1,11 @@
 import $ from 'jquery';
-import KeyCodes from './keyCodes';
-import { htmlEntities } from './helpers';
 import changeBgColor from './bgColorSystem';
-import TerminalHistory from './terminalHistory';
-import { Directory } from './directorySystem';
 import { processCommand, runSavedCommands } from './commandSystem';
-import { $terminalWindow, $terminalOutput, $commandInput, $directoryLinks } from './elements';
+import { Directory } from './directorySystem';
+import { $commandInput, $terminalOutput, $terminalWindow } from './elements';
+import { htmlEntities } from './helpers';
+import KeyCodes from './keyCodes';
+import TerminalHistory from './terminalHistory';
 
 const main = function() {
 
@@ -66,6 +66,7 @@ const openPage = function(page) {
         case 'about':
         case 'resume':
         case 'notes':
+        case 'chatbot':
         case 'contact':
             let prefix = Directory.current != '~' ? '~/' : '';
             triggerCommand('open ' + prefix + page);

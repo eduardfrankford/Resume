@@ -22,3 +22,7 @@ export const openResume = function() {
 export const openNotes = function() {
     window.open("/blog.html", '_blank');
 };
+
+export const openChatBot = function() {
+    window.open("/chatbot.html", '_blank');
+};

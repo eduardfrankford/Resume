@@ -1,4 +1,4 @@
-import { openResume, openNotes } from './resumeViewer';
+import { openChatBot, openNotes, openResume } from './resumeViewer';
 
 export default {
     '~': {
@@ -20,6 +20,9 @@ export default {
         },
         resume: {
             execute: openResume
+        },
+        chatbot: {
+            execute: openChatBot
         },
         contact: {
             contents: '#contact'
