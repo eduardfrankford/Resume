@@ -67,7 +67,6 @@
 <div id="demo">
     <div id="chatBotCommandDescription"></div>
     <input id="humanInput" type="text" placeholder="Say something (in English)" />
-
     <div class="button" onclick="if (!ChatBot.playConversation(sampleConversation,4000)) {alert('conversation already running');};">Play sample conversation!</div>
     <div class="button" onclick="$('#chatBotCommandDescription').slideToggle();" style="margin-right:10px">What can I say?</div>
 
@@ -103,36 +102,37 @@
     ChatBot.init(config);
     ChatBot.setBotName("Eduard Bot");
     ChatBot.addPattern("^hi|hello$", "response", "Hello :-)", undefined, "Say 'Hi' to be greeted back.");
-    ChatBot.addPattern("^How are you|How are you doing$", "response", "Good and you? :-)", undefined, "How are you?");
+    ChatBot.addPattern("^How are you|How are you doing$", "response", "Good and you? :-)", undefined, "'How are you?'");
+    ChatBot.addPattern("^If you could only eat one meal for the rest of your life, what would it be?", "response", "It would be salmon with potatos, because I love it and I get proteins and carbs out of it :-D", undefined, "'If you could only eat one meal for the rest of your life, what would it be?'");
+    ChatBot.addPattern("^Who is your favorite author?", "response", "Daniel Kahnemann or Jordan Peterson", undefined, "Who is your favorite author?");
+    ChatBot.addPattern("^If you could hire someone to help you, would it be with cleaning, cooking, or yard work?", "response", "I would hire someone for cooking, because it takes a lot of effort to cook healthy (and I am not the best cook :-P)", undefined, "'If you could hire someone to help you, would it be with cleaning, cooking, or yard work?'");
+    ChatBot.addPattern("^Would you rather ride a bike, ride a horse, or drive a car?", "response", "I think for short distances I prefer the bike and long distances of course the car :-)", undefined, "'Would you rather ride a bike, ride a horse, or drive a car?'");
+    ChatBot.addPattern("^What would you sing at Karaoke night?", "response", "A hero of war, by Rise Against :-)", undefined, "'What would you sing at Karaoke night?'");
+    ChatBot.addPattern("^What two radio stations do you listen to in the car the most?", "response", "OE3 and Radio Tirol :-) (On spotify Beach House Radio)", undefined, "'What two radio stations do you listen to in the car the most?'");
+    ChatBot.addPattern("^Which would you rather do: wash dishes, mow the lawn, clean the bathroom, or vacuum the house?", "response", "Mow the lawn :-D", undefined, "'Which would you rather do: wash dishes, mow the lawn, clean the bathroom, or vacuum the house?'");
+    ChatBot.addPattern("^What is your proudest accomplishment?", "response", "At the moment, that I was able to finish two degrees in parallel (Computer Science and International Economics).", undefined, "'What is your proudest accomplishment?'");
+    ChatBot.addPattern("^What is your favorite book to read?", "response", "I like to read educational books. At the moment I really like 'Thinking Fast and Slow'.", undefined, "'What is your favorite book to read?'");
+    ChatBot.addPattern("^What was the last movie you went to? What did you think?", "response", "The last movie I went to was 'Escape Room 2' and I think it was pretty good especially the plot twist in the end ;-).", undefined, "'What was the last movie you went to? What did you think?'");
+    ChatBot.addPattern("^What did you want to be when you were small?", "response", "Olympic Champion in Taekwondo, then later a PE and Maths teacher, because of the long summer vacation :-D", undefined, "'What did you want to be when you were small?'");
+    ChatBot.addPattern("^What is your favorite game or sport to watch and play?", "response", "Hmmm, I really like to surf and also watch the WSL :-)", undefined, "'What is your favorite game or sport to watch and play?'");
+    ChatBot.addPattern("^What would you change about yourself if you could?", "response", "Haha, thats a funny question! What comes to my mind is my smelling sense, because I can not smell very well :-D", undefined, "'What would you change about yourself if you could?'");
+    ChatBot.addPattern("^What really makes you angry?", "response", "It makes me angry when I see people getting treated badly although they give their best. Or of course sometimes the stupidity of some people saying that Covid is like the flu and they don't need a vaccine.", undefined, "'What really makes you angry?'");
+    ChatBot.addPattern("^What motivates you to work hard?", "response", "To become the best version of myself and oftentimes also future rewards. Sometimes I am sacrificing a lot which I could consume now to have a better life in future. I think it is really hard to find the right path between enjoying now or enjoying more later.", undefined, "'What motivates you to work hard?'");
+    ChatBot.addPattern("^What is your favorite thing about your career?", "response", "At the moment I have no real career, but because of my Computer Science studies I am very flexible working remotely, which means that I can travel a lot and work from there :-)", undefined, "'What is your favorite thing about your career?'");
+    ChatBot.addPattern("^If you could live anywhere, where would it be", "response", "It would either be Innsbruck, because I have most of my family and friends there. Or it would be Oslo, because from my point of view Norway is the place to be long term. Very likely they won't be affected in a very bad way because of global warming and because of their oil money which was invested in the stock market the pension system and everything is financed. And, all in all I love the Norwegian way to live :-)", undefined, "'If you could live anywhere, where would it be?'");
+    ChatBot.addPattern("^What is your biggest fear?", "response", "Hmm, that's difficult to say, but I would say that I am fearful of dying before I have really lived my life. With that I mean, dying before getting children, travelling the world, building a house etc.", undefined, "'What is your biggest fear?'");
+    ChatBot.addPattern("^What is your favorite family vacation?", "response", "My favorite family vacation is to go camping with them either to the lake garda (San Felice) or to Greece.", undefined, "'What is your favorite family vacation?'");
+    ChatBot.addPattern("^Who is your hero", "response", "My favorite hero is iron man because he was not born with a special super power, but he worked for it by becoming a genious scientist", undefined, "'Who is your hero?'");
+    ChatBot.addPattern("^Winter or Summer", "response", "Hmm ... I like both, but if you force an answer then I would say Summer, because the days are longer!", undefined, "'Winter or Summer?'");
     ChatBot.addPattern("(?:my name is|I'm|I am) (.*)", "response", "hi $1, thanks for talking to me today", function (matches) {
         ChatBot.setHumanName(matches[1]);
     },"Say 'My name is [your name]' or 'I am [name]' to be called like that by me");
     ChatBot.addPattern("(what is the )?meaning of life", "response", "42", undefined, "Say 'What is the meaning of life' to get the answer.");
     ChatBot.addPattern("compute ([0-9]+) plus ([0-9]+)", "response", undefined, function (matches) {
         ChatBot.addChatEntry("That would be "+(1*matches[1]+1*matches[2])+".","bot");
-    },"Say 'compute [number] plus [number]' to make the bot your math monkey");
+    },"Say 'compute [number] plus [number]' to make me your math monkey");
     ChatBot.addPattern("^bye$", "response", "See you later buddy", undefined, "Say 'Bye' to end the conversation.");
-    ChatBot.addPattern("^If you could only eat one meal for the rest of your life, what would it be?", "response", "It would be salmon with potatos, because I love it and I get proteins and carbs out of it :-D", undefined, "If you could only eat one meal for the rest of your life, what would it be?");
-    ChatBot.addPattern("^Who is your favorite author?", "response", "Daniel Kahnemann or Jordan Peterson", undefined, "Who is your favorite author?");
-    ChatBot.addPattern("^If you could hire someone to help you, would it be with cleaning, cooking, or yard work?", "response", "I would hire someone for cooking, because it takes a lot of effort to cook healthy (and I am not the best cook :-P)", undefined, "If you could hire someone to help you, would it be with cleaning, cooking, or yard work?");
-    ChatBot.addPattern("^Would you rather ride a bike, ride a horse, or drive a car?", "response", "I think for short distances I prefer the bike and long distances of course the car :-)", undefined, "Would you rather ride a bike, ride a horse, or drive a car?");
-    ChatBot.addPattern("^What would you sing at Karaoke night?", "response", "A hero of war, by Rise Against :-)", undefined, "What would you sing at Karaoke night?");
-    ChatBot.addPattern("^What two radio stations do you listen to in the car the most?", "response", "OE3 and Radio Tirol :-) (On spotify Beach House Radio)", undefined, "What two radio stations do you listen to in the car the most?");
-    ChatBot.addPattern("^Which would you rather do: wash dishes, mow the lawn, clean the bathroom, or vacuum the house?", "response", "Mow the lawn :-D", undefined, "Which would you rather do: wash dishes, mow the lawn, clean the bathroom, or vacuum the house?");
-    ChatBot.addPattern("^What is your proudest accomplishment?", "response", "At the moment, that I was able to finish two degrees in parallel (Computer Science and International Economics).", undefined, "What is your proudest accomplishment?");
-    ChatBot.addPattern("^What is your favorite book to read?", "response", "I like to read educational books. At the moment I really like 'Thinking Fast and Slow'.", undefined, "What is your favorite book to read?");
-    ChatBot.addPattern("^What was the last movie you went to? What did you think?", "response", "The last movie I went to was 'Escape Room 2' and I think it was pretty good especially the plot twist in the end ;-).", undefined, "What was the last movie you went to? What did you think?");
-    ChatBot.addPattern("^What did you want to be when you were small?", "response", "Olympic Champion in Taekwondo, then later a PE and Maths teacher, because of the long summer vacation :-D", undefined, "What did you want to be when you were small?");
-    ChatBot.addPattern("^What is your favorite game or sport to watch and play?", "response", "Hmmm, I really like to surf and also watch the WSL :-)", undefined, "What is your favorite game or sport to watch and play?");
-    ChatBot.addPattern("^What would you change about yourself if you could?", "response", "Haha, thats a funny question! What comes to my mind is my smelling sense, because I can not smell very well :-D", undefined, "What would you change about yourself if you could?");
-    ChatBot.addPattern("^What really makes you angry?", "response", "It makes me angry when I see people getting treated badly although they give their best. Or of course sometimes the stupidity of some people saying that Covid is like the flu and they don't need a vaccine.", undefined, "What really makes you angry?");
-    ChatBot.addPattern("^What motivates you to work hard?", "response", "To become the best version of myself and oftentimes also future rewards. Sometimes I am sacrificing a lot which I could consume now to have a better life in future. I think it is really hard to find the right path between enjoying now or enjoying more later.", undefined, "What motivates you to work hard?");
-    ChatBot.addPattern("^What is your favorite thing about your career?", "response", "At the moment I have no real career, but because of my Computer Science studies I am very flexible working remotely, which means that I can travel a lot and work from there :-)", undefined, "What is your favorite thing about your career?");
-    ChatBot.addPattern("^If you could live anywhere, where would it be", "response", "It would either be Innsbruck, because I have most of my family and friends there. Or it would be Oslo, because from my point of view Norway is the place to be long term. Very likely they won't be affected in a very bad way because of global warming and because of their oil money which was invested in the stock market the pension system and everything is financed. And, all in all I love the Norwegian way to live :-)", undefined, "If you could live anywhere, where would it be?");
-    ChatBot.addPattern("^What is your biggest fear?", "response", "Hmm, that's difficult to say, but I would say that I am fearful of dying before I have really lived my life. With that I mean, dying before getting children, travelling the world, building a house etc.", undefined, "What is your biggest fear?");
-    ChatBot.addPattern("^What is your favorite family vacation?", "response", "My favorite family vacation is to go camping with them either to the lake garda (San Felice) or to Greece.", undefined, "What is your favorite family vacation?");
-    ChatBot.addPattern("^Who is your hero", "response", "My favorite hero is iron man because he was not born with a special super power, but he worked for it by becoming a genious scientist", undefined, "Who is your hero?");
-    ChatBot.addPattern("^Winter or Summer", "response", "Hmm ... I like both, but if you force an answer then I would say Summer, because the days are longer!", undefined, "Winter or Summer?");
+    
 </script>
 </body>
 </html>
