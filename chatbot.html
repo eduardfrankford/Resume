@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
     <title>My virtual self</title>
+    <meta name="description"
+    content="Hello my name is Eduard Frankford and on this page you find a virtual version of myself represented as a chatbot" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
         body {
             color: #333;
@@ -50,6 +53,31 @@
             display: none;
         }
     </style>
+
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1NJCXW6TCW"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-1NJCXW6TCW');
+    </script>
+    <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5566590506228701"
+        crossorigin="anonymous"></script> -->
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-115131790-2">
+    </script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-115131790-2');
+    </script>
+
 </head>
 <body>
 
@@ -60,14 +88,15 @@
 
 <div class="container">
     <header>
-        <h1><img src="img/me.jpg" /> <br>Eduard Frankford</h1>
+        
+        <h1><a href="index.html" target="blank"><img src="img/me.jpg" /> </a><br>Eduard Frankford</h1>
     </header>
 </div>
 
 <div id="demo">
     <div id="chatBotCommandDescription"></div>
     <input id="humanInput" type="text" placeholder="Say something (in English)" />
-    <div class="button" onclick="if (!ChatBot.playConversation(sampleConversation,4000)) {alert('conversation already running');};">Play sample conversation!</div>
+    <div class="button" onclick="if (!ChatBot.playConversation(sampleConversation,2000)) {alert('conversation already running');};">Play sample conversation!</div>
     <div class="button" onclick="$('#chatBotCommandDescription').slideToggle();" style="margin-right:10px">What can I say?</div>
 
     <div style="clear: both;">&nbsp;</div>
