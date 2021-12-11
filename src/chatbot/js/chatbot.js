@@ -117,6 +117,7 @@ var ChatBot = function () {
                     // did we cycle through the conversation array? if so, stop
                     if (state.conversationArrayIndex == 0) {
                         $('#chatBotConversationLoadingBar').remove();
+                        ga('send', 'event', 'Sample Conversation', 'play', 'No Campaing');
                         sampleConversationRunning = false;
                         return;
                     }
