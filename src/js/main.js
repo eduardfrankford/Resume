@@ -28,6 +28,7 @@ const main = function() {
         let txt = '';
         switch(e.which) {
             case KeyCodes.ENTER:
+                ga('send', 'event', 'Command entered',this.value, 'No Campaing');
                 handleEnter(this.value);
                 break;
             case KeyCodes.ARROW_UP:

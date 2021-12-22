@@ -140,7 +140,8 @@
         <div class="button"
             onclick="if (!ChatBot.playConversation(sampleConversation,2000)) {alert('conversation already running');};">
             Play sample conversation!</div>
-        <div class="button" onclick="$('#chatBotCommandDescription').slideToggle();">What can I say?</div>
+        <div class="button" onclick="$('#chatBotCommandDescription').slideToggle(); ga('send', 'event', 'What can I say', 'play', 'No Campaing');
+        ">What can I say?</div>
 
         <div style="clear: both;">&nbsp;</div>
 

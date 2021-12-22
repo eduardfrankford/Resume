@@ -117,7 +117,7 @@ var ChatBot = function () {
                     // did we cycle through the conversation array? if so, stop
                     if (state.conversationArrayIndex == 0) {
                         $('#chatBotConversationLoadingBar').remove();
-                        ga('send', 'event', 'Sample Conversation', 'play', 'No Campaing');
+                        ga('send', 'event', 'Play Sample Conversation', 'play', 'No Campaing');
                         sampleConversationRunning = false;
                         return;
                     }
@@ -389,9 +389,12 @@ var ChatBot = function () {
 
             /* function */
             function sentQuestion() {
-                // alert('Horray! Someone wrote "' + this.value + '"!');
+                ga('send', 'event', 'Asked question',$(this).val(), 'No Campaing');
+                //alert('Horray! Someone wrote "' + this.value + '"!');
                 ChatBot.addChatEntry($(this).val(), "human");
                 ChatBot.react($(this).val());
+
+
             }
 
         },

@@ -47,13 +47,14 @@ export const processCommand = function(input) {
         if(parts[i].trim() == '')
             parts.splice(i, 1);
     }
+    ga('send', 'event', 'Command entered ',input, 'No Campaing');
     const commandName = parts[0];
     const command = AllCommands[commandName];
     const options = [];
     const args = [];
 
     if(command === undefined) {
-        throw new Error('-bash: '+commandName+': command not found');
+        throw new Error('-bash: '+commandName+': command nfot found');
     }
 
     parts = parts.splice(1);

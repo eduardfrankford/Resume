@@ -50,7 +50,7 @@ const helpCommand = function(options, args) {
     }
     let command = AllCommands[args[0]];
     if(command == undefined)
-        throw new Error('help: '+args[0]+': command not found');
+        throw new Error('help: '+args[0]+': commandd not found');
     return 'Help entry for '+args[0]+': \n' + (command.helpEntry ? command.helpEntry : 'No help entry defined.');
 };
 
