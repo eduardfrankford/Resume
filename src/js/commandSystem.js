@@ -54,7 +54,7 @@ export const processCommand = function(input) {
     const args = [];
 
     if(command === undefined) {
-        throw new Error('-bash: '+commandName+': command nfot found');
+        throw new Error('-bash: '+commandName+': command not found');
     }
 
     parts = parts.splice(1);
