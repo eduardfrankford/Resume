@@ -66,14 +66,14 @@
 
                     </header>
                     <!-- Preview image figure-->
-                    <figure class="mb-4"><img class="img-fluid rounded" src="../img/bitcoin_chart.jpg"
+                    <figure class="mb-4"><img class="img-fluid rounded" src="../img/rsz_1bitcoin_chart.jpg"
                             alt="Image of the bitcoin chart" /></figure>
                     <!-- Post content-->
                     <section class="mb-5">
                         <h2 class="fw-bolder mb-4 mt-5">Goal:</h2>
                         <p class="fs-5 mb-4">Everytime Elon Musk posts something positive or negative about bitcoin or
                             some other
-                            crypto-currencies, then the price goes up or down. Thats what many people feel when they
+                            crypto-currencies, then the price goes up or down. That's what many people think when they
                             take a look at the bitcoin price after Musk posts something on Twitter. The goal of this
                             article is to statistically analyze the correlation between Elon Musk tweets and price
                             increase or decrease of a Bitcoin. </p>
@@ -162,8 +162,8 @@
                         In order to be able to predict whether the bitcoin price will go up or down we need to classify
                         whether it is positive or negative.
                         We tried to do this automatically with Vader sentiment analysis, but we saw that these results
-                        are very unreliable as it is really hard for a classifier to asses a short tweet like "You can
-                        now buy a Tesla with Bitcoin" or "Toss a bitcoin to your witcher", because to asses something
+                        are very unreliable as it is really hard for a classifier to assess a short tweet like "You can
+                        now buy a Tesla with Bitcoin" or "Toss a bitcoin to your witcher", because to assess something
                         like that a lot of industry knowledge
                         is needed.
                         Therefore, we decided to label the 24 tweets manually.
@@ -190,7 +190,7 @@
 
                         <h2 class="fw-bolder mb-4 mt-5">Prepare bitcoin prices and merge dataset with musk tweets</h2>
                         <p class="fs-5 mb-4">
-                            Let's start again with the same routine as always: Import libraries,datasets and do some
+                            Let's start again with the same routine as always: Import libraries, datasets and do some
                             cleaning.
                         <pre style="background-color: lightgray;"><code>
     import datetime
@@ -285,7 +285,7 @@
                         <h2 class="fw-bolder mb-4 mt-5">Calculate hourly changes</h2>
                         <p class="fs-5 mb-4">
                             To continue lets calculate the differences in the bitcoin price from one hour to the other.
-                            We need this calculation in order to asses whether the bitcoin price fluctuation after Elon
+                            We need this calculation in order to assess whether the bitcoin price fluctuation after Elon
                             Musk posts something is abnormal,
                             because if we dont know how much the bitcoin price changes on average the positive or
                             negative increase after the post could just be a coincidence.
@@ -480,7 +480,7 @@
                             'Dogecoin' or to try to find the same arbitrage possibilities for other influential persons
                             as Elon Musk does not post about crypto-currencies regularly.
                             We have seen he has only posted 24 times about Bitcoin in the last three years. Therefore,
-                            be attentive an check his tweets to be ready to take action if he posts ;-)
+                            be attentive and check his tweets to be ready to take action if he posts ;-)
 
                         </p>
 
