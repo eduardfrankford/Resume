@@ -70,6 +70,8 @@ const openPage = function(page) {
         case 'contact':
             let prefix = Directory.current != '~' ? '~/' : '';
             triggerCommand('open ' + prefix + page);
+            // if(page == 'notes' || page == 'chatbot') {
+            //     triggerCommand("clear");}
             break;
     }
     if(page != 'resume' && $(window).width() < 500) {

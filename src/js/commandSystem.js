@@ -23,6 +23,8 @@ export const runSavedCommands = function(callback) {
     lastCommands = lastCommands.split(COMMAND_COOKIE_ARR_DIVIDER);
     for(let i = 0; i < lastCommands.length; i++) {
         // only run open resume command if it is the last one
+        if(lastCommands[i].indexOf('notes') > 0 || lastCommands[i].indexOf('chatbot') > 0)
+            continue;
         if(lastCommands[i].indexOf('resume') < 0 || i == lastCommands.length-1) {
             callback(lastCommands[i]);
         }
