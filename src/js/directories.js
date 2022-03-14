@@ -7,7 +7,7 @@ export default {
             contents: '#about'
         },
         projects: {
-            items: [  'frankfordtaewkondo', 'codeability' ],
+            items: [ 'fahrschulpreisvergleich', 'surfSkTown', 'frankfordtaewkondo', 'codeability' ],
             fahrschulpreisvergleich: {
                 contents: '#project-fahrschul-preisvergleich'
             },
