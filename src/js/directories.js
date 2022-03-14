@@ -8,6 +8,12 @@ export default {
         },
         projects: {
             items: [  'frankfordtaewkondo', 'codeability' ],
+            fahrschulpreisvergleich: {
+                contents: '#project-fahrschul-preisvergleich'
+            },
+            surfSkTown: {
+                contents: '#project-surf-sktown'
+            },
             frankfordtaewkondo: {
                 contents: '#project-frankfordtaekwondo'
             },
