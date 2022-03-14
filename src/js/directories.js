@@ -7,18 +7,18 @@ export default {
             contents: '#about'
         },
         projects: {
-            items: [ 'fahrschulpreisvergleich', 'surfSkTown', 'frankfordtaewkondo', 'codeability' ],
+            items: [ 'Fahrschulpreisvergleich', 'Surfsktown', 'FrankfordTaewkondo', 'CodeAbility' ],
             fahrschulpreisvergleich: {
-                contents: '#project-fahrschul-preisvergleich'
+                contents: '#project-fahrschulpreisvergleich'
             },
-            surfSkTown: {
-                contents: '#project-surf-sktown'
+            surfsktown: {
+                contents: '#project-surfsktown'
             },
             frankfordtaewkondo: {
                 contents: '#project-frankfordtaekwondo'
             },
             codeability: {
-                contents: '#project-codeAbility'
+                contents: '#project-codeability'
             }
         },
         notes: {
