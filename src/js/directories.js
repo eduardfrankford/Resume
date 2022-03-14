@@ -7,9 +7,9 @@ export default {
             contents: '#about'
         },
         projects: {
-            items: [ 'Fahrschulpreisvergleich', 'Surfsktown', 'FrankfordTaewkondo', 'CodeAbility' ],
-            fahrschulpreisvergleich: {
-                contents: '#project-fahrschulpreisvergleich'
+            items: [ 'DSCP', 'Surfsktown', 'FrankfordTaewkondo', 'CodeAbility' ],
+            dscp: {
+                contents: '#project-fahrschulvergleich'
             },
             surfsktown: {
                 contents: '#project-surfsktown'
