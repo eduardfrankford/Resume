@@ -1,147 +1,152 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>Eduard Frankford</title>
-    <meta name="description"
-        content="Hello my name is Eduard Frankford and I am a computer science master student with experience in Java, JavaScript, PHP, MySQL, HTML, and CSS." />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="css/mac.css" rel="stylesheet" />
-    <link href="css/app.css" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eduard Frankford, PhD</title>
 
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-115131790-2"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-115131790-2');
-</script>
-
-
+    <!-- Optional Bootstrap JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<style>
+    .custom-navbar {
+        padding: 1rem 1rem !important;  /* increased padding for the navbar */
+    }
+    .custom-navbar .navbar-brand,
+    .custom-navbar .nav-link {
+        font-size: 1rem;  /* increased font size for navbar text */
+    }
+</style>
 <body>
-    <div class="container">
-        <header>
-            <h1><img src="img/me.jpeg" /> <br>Eduard Frankford</h1>
-            <nav>
-                <ul>
-                    <li><a href="#" title="open ~/">home</a></li>
-                    <li><a href="#" title="open ~/about">about</a></li>
-                    <li><a href="eduard-frankford.pdf" title="open ~/resume">resume</a></li>
-                    <li><a href="#" title="open ~/contact">contact</a></li>
-                </ul>
-            </nav>
-        </header>
 
-        <div class="terminal mac-window">
-            <div class="titlebar">
-                <div class="buttons">
-                    <div class="close" data-color="red"><span>&times;</span></div>
-                    <div class="minimize" data-color="yellow"><span>&ndash;</span></div>
-                    <div class="zoom" data-color="green"><span>+</span></div>
-                </div>
-                Terminal &mdash; bash <span id="current-directory">~</span>
-            </div>
-            <div class="content" id="window">
-                <div id="output">Hello! Navigate by entering commands or clicking on links above<br><span
-                        id="default-output">Type <span class="blue">ls</span> for item listing, or <span
-                            class="blue">help</span> for a list of commands<br></span></div>
-                <div class="command-input">
-                    $ <input type="text" id="command" spellcheck="false" autocomplete="false" autocorrect="off"
-                        autocapitalize="off" />
-                </div>
-            </div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top custom-navbar">
+        <a class="navbar-brand" href="#">Eduard Frankford</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#research-interests">Research Interests</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#theses">Theses Topics</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#teaching">Teaching</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#publications">Publications</a>
+                </li>
+            </ul>
         </div>
+    </nav>
 
-        <!-- hidden, used in terminal -->
-        <div class="pages">
-            <div id="about">
-                <b>:: About Me ::</b>
-                Hello! I am currently a Doctoral Student and Senior Scientist in Computer Science at the University of Innsbruck, building on my soon-to-be-finished Master in Software Engineering and Master's in International Economics. I am multilingual, proficient in Spanish, French, English, and German, a skill that has enriched my global collaborations and engagements.
-
-                In addition to my academic pursuits, I recently founded Frankford's IT-Solutions. As a dynamic startup, we specialize in the development of custom software, website design, and process automation solutions tailored to our client's unique business needs.
-                
-                My journey has been marked by discipline and resilience, honed during my years as a member of the Taekwondo National Team of Austria. This experience has taken me to various international tournaments and training camps in Iran, China, Taiwan, Russia, and beyond.
-                
-                My practical experience is further complemented by my role as a software developer for the CodeAbility project at the University of Innsbruck.
-                
-                Beyond academics and business, I am deeply passionate about promoting physical fitness and discipline. As such, I volunteer my time as a coach at my sports club, Frankford-Taekwondo. This role allows me to give back to the community by nurturing the next generation of Taekwondo athletes.
-                
-                To explore more about my professional journey, research, and global adventures, please visit my personal website: www.eduardfrankford.com or www.frankford-it.at.
-            </div>
-            <div id="contact">
-                <b>:: Contact Info ::</b>
-                let's get in touch!
-                email= <a href="mailto:eduard.frankford@gmail.com">eduard.frankford@gmail.com</a>
-                github= <a href="http://github.com/eduardfrankford">eduardfrankford</a>
-                linked_in= <a href="https://www.linkedin.com/in/eduard-frankford/">Eduard Frankford</a>
-                stack_overflow= <a href="https://stackoverflow.com/users/14551409/eduard-frankford">14551409/eduard</a>
-            </div>
-            <div id="site-info">
-                <b>:: Site Info ::</b>
-                Built with JavaScript, with a hint of jQuery
-                Webpack for module bundling and ES6 transpiling
-                NPM for JS dependency management
-                Hosted on Netlify
-            </div>
-            <h4>Projects</h4>
-            <div id="project-surfsktown">
-                <b>Surf-SkTown</b> <a href="https://www.surf-sktown.com/" target="_blank">surf-sktown.com</a>
-                To give something back to the local community in Sri Lanka, I creat websites for Sri Lankan Surf instructors for free.
-                Like this they can offer their services online and get easier access to customers from Europe. 
-            </div>
-            <div id="project-fahrschulvergleich">
-                <b>Fahrschul-Preisvergleich</b> <a href="https://fahrschul-preisvergleich.link/" target="_blank">fahrschul-preisvergleich.link</a>
-                Some friends and I created a driving school comparison platform, in order to make it easier to compare driving schools in Austria.
-                It offers sort by price, filter by location and cars used.
-            </div>
-            <div id="project-frankfordtaekwondo">
-                <b>Frankford-Taekwondo</b> <a href="https://www.frankford-taekwondo.at/" target="_blank">frankford-taekwondo.com</a>
-                A simple website that I made for my Taekwondo club
-            </div>
-            <div id="project-codeability">
-                <b>CodeAbility</b> <a
-                    href="https://sharing.codeability-austria.uibk.ac.at/static/SharingCodeAbility.html"
-                    target="_blank">codeability.at</a>
-                A website I am working on as an employee of the University of Innsbruck
-            </div>
-        </div>
-
-        <footer>
-            { <a href="https://github.com/eduardfrankford/Resume">view source : <b>github</b></a> }
-            <br>
-            { <a href="/privacy.html">view privacy statement: <b>privacy</b></a> }
-
-            <!-- <div>
-                <script data-name="BMC-Widget" data-cfasync="false"
-                    src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="eduardfrankford"
-                    data-description="Support me on Buy me a coffee!" data-message="" data-color="#5F7FFF"
-                    data-position="Right" data-x_margin="18" data-y_margin="18"></script>
-            </div> -->
-        </footer>
-
-        <div class="mac-window" id="resume-viewer-container">
-            <div class="titlebar">
-                <div class="buttons">
-                    <div class="close" id="resume-close"><span>&times;</span></div>
-                    <div class="minimize"><span>&ndash;</span></div>
-                    <div class="zoom"><span>+</span></div>
+    <div>
+        <section id="profile" class="container my-4">
+            <h2>Profile</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="img/me.jpeg" alt="Eduard Frankford's Picture" class="img-fluid rounded-circle mb-3">
                 </div>
-                Eduard's resume
+                <div class="col-md-8">
+                    <p>
+                        <strong>PhD Researcher</strong><br>
+                        University of Innsbruck<br>
+                        Department of Computer Science<br>
+                        <br>
+                        ICT Building Room 3M04<br>
+                        Technikerstraße 21a<br>
+                        A-6020 Innsbruck<br>
+                        Austria - Europe<br>
+                        <br>
+                        Email: Firstname.Secondname [AT_NOSPAM] uibk.ac.at<br>
+                        <a href="https://www.linkedin.com/in/eduardfrankford/" target="_blank">
+                            <i class="fab fa-linkedin fa-2x" style="color: #0077b5;"></i>
+                        </a>
+                    </p>
+                </div>
             </div>
-            <div class="content">
-                <a href="eduard-frankford.pdf" class="download"><b>click to download pdf</b></a>
-                <div id="resume-viewer"></div>
-            </div>
-        </div>
-
+        </section>
     </div>
-    <!--/.container-->
 
-    <script src="dist/bundle.js"></script>
+    <div class="bg-light p-4">
+        <section id="research-interests" class="container my-4">
+            <h2>Research Interests</h2>
+            <ul class="list-group">
+                <li class="list-group-item"><i class="fas fa-check-circle" style="color: #0077b5;"></i> Applications of Artificial Intelligence in Automated Programming Assessment Systems</li>
+                <li class="list-group-item"><i class="fas fa-check-circle" style="color: #0077b5;"></i> Scientific Testing of User Experience</li>
+                <li class="list-group-item"><i class="fas fa-check-circle" style="color: #0077b5;"></i> Drivers behind the Sharing Economy</li>
+            </ul>
+        </section>
+    </div>
+    
+    
 
+    <div class="p-4">
+        <section id="theses" class="container my-4">
+            <h2>Available Theses Topics</h2>
+            <p>
+                I provide guidance on topics suitable for seminars (SE), bachelor's (BSC), and master's (MSC) theses, primarily within the disciplines of computer science (CS), software engineering (SE), and information systems (IS). I mentor students from the University of Innsbruck and various other European institutions. Below is a compilation of potential thesis topics. Should any of these pique your interest, I welcome you to reach out.
+            </p>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Type</th>
+                        <th>Study</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Comparative Analysis of Student Performance in Automated Programming Assessment Systems Before and After the Integration of ChatGPT</td>
+                        <td>BSC</td>
+                        <td>CS</td>
+                    </tr>
+                    <tr>
+                        <td>A Systematic Literature Review of the Applications of Large Language Models (like ChatGPT) in Automated Programming Assessment Systems</td>
+                        <td>BSC</td>
+                        <td>CS</td>
+                    </tr>
+                    <tr>
+                        <td>A Comprehensive Overview of the Impact of Automated Programming Assessment Systems on Teachers and Learners</td>
+                        <td>BSC</td>
+                        <td>CS</td>
+                    </tr>
+                    <tr>
+                        <td>An Exploration of the Potential Uses of Large Language Models in Facilitating Exercise Generation for Automated Programming Assessment Systems</td>
+                        <td>BSC</td>
+                        <td>CS</td>
+                    </tr>
+                    <tr>
+                        <td>Predictive Modeling: Forecasting Student Performance in Programming Using Insights from ChatGPT Interactions</td>
+                        <td>BSC</td>
+                        <td>CS</td>
+                    </tr>
+                    <tr>
+                        <td>Assessing the Reliability and Validity of Automated Feedback from ChatGPT in Programming Scenarios</td>
+                        <td>BSC</td>
+                        <td>CS</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+    
+
+
+    <footer class="bg-light py-3 mt-5">
+        <p class="text-center">&copy; 2023 Eduard Frankford</p>
+    </footer>
 
 </body>
 
