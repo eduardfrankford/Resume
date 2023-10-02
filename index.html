@@ -16,26 +16,29 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script>
-        $(document).ready(function(){
-            $(".clickable-row").click(function(){
+        $(document).ready(function () {
+            $(".clickable-row").click(function () {
                 var target = $(this).data("target");
-                if($(target).hasClass("show")) {
+                if ($(target).hasClass("show")) {
                     $(this).find(".fas").removeClass("fa-chevron-up").addClass("fa-chevron-down");
                 } else {
                     $(this).find(".fas").removeClass("fa-chevron-down").addClass("fa-chevron-up");
                 }
             });
         });
-    
+
     </script>
 </head>
 <style>
     .custom-navbar {
-        padding: 1rem 1rem !important;  /* increased padding for the navbar */
+        padding: 1rem 1rem !important;
+        /* increased padding for the navbar */
     }
+
     .custom-navbar .navbar-brand,
     .custom-navbar .nav-link {
-        font-size: 1rem;  /* increased font size for navbar text */
+        font-size: 1rem;
+        /* increased font size for navbar text */
     }
 
     .clickable-row {
@@ -46,13 +49,12 @@
         background-color: #f5f5f5;
     }
 
-    .fa-chevron-down, .fa-chevron-up {
+    .fa-chevron-down,
+    .fa-chevron-up {
         float: right;
     }
-
-
-
 </style>
+
 <body>
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top custom-navbar">
@@ -108,20 +110,27 @@
         <section id="research-interests" class="container my-4">
             <h2>Research Interests</h2>
             <ul class="list-group">
-                <li class="list-group-item"><i class="fas fa-check-circle" style="color: #0077b5;"></i> Applications of Artificial Intelligence in Automated Programming Assessment Systems</li>
-                <li class="list-group-item"><i class="fas fa-check-circle" style="color: #0077b5;"></i> Scientific Testing of User Experience</li>
-                <li class="list-group-item"><i class="fas fa-check-circle" style="color: #0077b5;"></i> Drivers behind the Sharing Economy</li>
+                <li class="list-group-item"><i class="fas fa-check-circle" style="color: #0077b5;"></i> Applications of
+                    Artificial Intelligence in Automated Programming Assessment Systems</li>
+                <li class="list-group-item"><i class="fas fa-check-circle" style="color: #0077b5;"></i> Scientific
+                    Testing of User Experience</li>
+                <li class="list-group-item"><i class="fas fa-check-circle" style="color: #0077b5;"></i> Drivers behind
+                    the Sharing Economy</li>
             </ul>
         </section>
     </div>
-    
-    
+
+
 
     <div class=" p-md-4">
         <section id="theses" class="container my-4">
             <h2>Available Theses Topics</h2>
             <p>
-                I provide guidance on topics suitable for seminars (SE), bachelor's (BSC), and master's (MSC) theses, primarily within the disciplines of computer science (CS), software engineering (SE), and information systems (IS). I mentor students from the University of Innsbruck and various other European institutions. Below is a compilation of potential thesis topics. Should any of these pique your interest, I welcome you to reach out.
+                I provide guidance on topics suitable for seminars (SE), bachelor's (BSC), and master's (MSC) theses,
+                primarily within the disciplines of computer science (CS), software engineering (SE), and information
+                systems (IS). I mentor students from the University of Innsbruck and various other European
+                institutions. Below is a compilation of potential thesis topics. Should any of these pique your
+                interest, I welcome you to reach out.
             </p>
             <table class="table table-bordered">
                 <thead>
@@ -132,72 +141,114 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr class="clickable-row" data-toggle="collapse" data-target="#topic1" aria-expanded="false" aria-controls="topic1">
-                        <td>Development and Implementation of an AI-Driven Test Feedback System using OpenAI's GPT API for Automated Programming Assessment</td>
+                    <tr class="clickable-row" data-toggle="collapse" data-target="#topic1" aria-expanded="false"
+                        aria-controls="topic1">
+                        <td>Development and Implementation of an AI-Driven Test Feedback System using OpenAI's GPT API
+                            for Automated Programming Assessment</td>
                         <td>BSC/MSC</td>
                         <td>CS</td>
                     </tr>
                     <tr id="topic1" class="collapse">
-                        <td colspan="3">In the realm of automated programming assessments, unit tests play a pivotal role in determining the correctness and efficiency of submitted code. While these tests can indicate where the code fails, they often fall short in providing qualitative feedback on why a particular piece of code may have failed or how to rectify the mistake.
+                        <td colspan="3">In the realm of automated programming assessments, unit tests play a pivotal
+                            role in determining the correctness and efficiency of submitted code. While these tests can
+                            indicate where the code fails, they often fall short in providing qualitative feedback on
+                            why a particular piece of code may have failed or how to rectify the mistake.
 
-                            By integrating the capabilities of OpenAI's GPT API, this system seeks to bridge this feedback gap. The AI-driven system will examine failing code in conjunction with the associated unit test failure, attempting to ascertain the underlying mistake. The feedback will then be enriched with detailed insights, offering suggestions, or pinpointing errors, assisting the programmer in understanding and rectifying their mistake.
-                            
-                            This approach promises to not only make feedback more informative but also aid in the learning process, ensuring that coders don't just identify their errors, but truly understand them, fostering deeper learning and better coding practices.
-                            
-                            In summary, the thesis will address a significant limitation in traditional automated programming assessments by leveraging the advanced capabilities of a large language model, offering a more holistic, informative, and educational feedback system for programmers.</td>
+                            By integrating the capabilities of OpenAI's GPT API, this system seeks to bridge this
+                            feedback gap. The AI-driven system will examine failing code in conjunction with the
+                            associated unit test failure, attempting to ascertain the underlying mistake. The feedback
+                            will then be enriched with detailed insights, offering suggestions, or pinpointing errors,
+                            assisting the programmer in understanding and rectifying their mistake.
+
+                            This approach promises to not only make feedback more informative but also aid in the
+                            learning process, ensuring that coders don't just identify their errors, but truly
+                            understand them, fostering deeper learning and better coding practices.
+
+                            In summary, the thesis will address a significant limitation in traditional automated
+                            programming assessments by leveraging the advanced capabilities of a large language model,
+                            offering a more holistic, informative, and educational feedback system for programmers.</td>
                     </tr>
-            
-                    <tr class="clickable-row" data-toggle="collapse" data-target="#topic2" aria-expanded="false" aria-controls="topic2">
-                        <td>Comparative Analysis of Student Performance in Automated Programming Assessment Systems Before and After the Integration of ChatGPT</td>
+
+                    <tr class="clickable-row" data-toggle="collapse" data-target="#topic2" aria-expanded="false"
+                        aria-controls="topic2">
+                        <td>Comparative Analysis of Student Performance in Automated Programming Assessment Systems
+                            Before and After the Integration of ChatGPT</td>
                         <td>BSC</td>
                         <td>CS</td>
                     </tr>
                     <tr id="topic2" class="collapse">
-                        <td colspan="3">This study sets out to analyze the impact of ChatGPT on student performance. By comparing student results before and after the indroduction of ChatGPT, the research aims to determine if the feedback and guidance provided by ChatGPT positively or negatively affect students' understanding and problem-solving capabilities in programming tasks.</td>
+                        <td colspan="3">This study sets out to analyze the impact of ChatGPT on student performance. By
+                            comparing student results before and after the indroduction of ChatGPT, the research aims to
+                            determine if the feedback and guidance provided by ChatGPT positively or negatively affect
+                            students' understanding and problem-solving capabilities in programming tasks.</td>
                     </tr>
-            
-                    <tr class="clickable-row" data-toggle="collapse" data-target="#topic3" aria-expanded="false" aria-controls="topic3">
-                        <td>A Systematic Literature Review of the Applications of Large Language Models (like ChatGPT) in Automated Programming Assessment Systems</td>
+
+                    <tr class="clickable-row" data-toggle="collapse" data-target="#topic3" aria-expanded="false"
+                        aria-controls="topic3">
+                        <td>A Systematic Literature Review of the Applications of Large Language Models (like ChatGPT)
+                            in Automated Programming Assessment Systems</td>
                         <td>BSC</td>
                         <td>CS</td>
                     </tr>
                     <tr id="topic3" class="collapse">
-                        <td colspan="3">The review aims to present a comprehensive picture of the current state of research in this intersection of AI and education. It will shed light on the real-world impacts of integrating models like ChatGPT in APAS, providing educators, researchers, and developers with a clearer understanding of the benefits, challenges, and future possibilities.</td>
+                        <td colspan="3">The review aims to present a comprehensive picture of the current state of
+                            research in this intersection of AI and education. It will shed light on the real-world
+                            impacts of integrating models like ChatGPT in APAS, providing educators, researchers, and
+                            developers with a clearer understanding of the benefits, challenges, and future
+                            possibilities.</td>
                     </tr>
-            
-                    <tr class="clickable-row" data-toggle="collapse" data-target="#topic4" aria-expanded="false" aria-controls="topic4">
-                        <td>A Comprehensive Overview of the Impact of Automated Programming Assessment Systems on Teachers and Learners</td>
+
+                    <tr class="clickable-row" data-toggle="collapse" data-target="#topic4" aria-expanded="false"
+                        aria-controls="topic4">
+                        <td>A Comprehensive Overview of the Impact of Automated Programming Assessment Systems on
+                            Teachers and Learners</td>
                         <td>BSC</td>
                         <td>CS</td>
                     </tr>
                     <tr id="topic4" class="collapse">
-                        <td colspan="3">This research delves into the multifaceted effects of Automated Programming Assessment Systems (APAS) on both educators and students within computer science education. It seeks to explore the benefits, challenges, and unintended consequences that emerge from automating the process of evaluating programming tasks, shedding light on how APAS transforms the pedagogical landscape.
+                        <td colspan="3">This research delves into the multifaceted effects of Automated Programming
+                            Assessment Systems (APAS) on both educators and students within computer science education.
+                            It seeks to explore the benefits, challenges, and unintended consequences that emerge from
+                            automating the process of evaluating programming tasks, shedding light on how APAS
+                            transforms the pedagogical landscape.
                         </td>
                     </tr>
-            
-                    <tr class="clickable-row" data-toggle="collapse" data-target="#topic5" aria-expanded="false" aria-controls="topic5">
-                        <td>An Exploration of the Potential Uses of Large Language Models in Facilitating Exercise Generation for Automated Programming Assessment Systems</td>
+
+                    <tr class="clickable-row" data-toggle="collapse" data-target="#topic5" aria-expanded="false"
+                        aria-controls="topic5">
+                        <td>An Exploration of the Potential Uses of Large Language Models in Facilitating Exercise
+                            Generation for Automated Programming Assessment Systems</td>
                         <td>BSC/MSC</td>
                         <td>CS</td>
                     </tr>
                     <tr id="topic5" class="collapse">
-                        <td colspan="3">This research aims to delve into the capabilities of large language models (LLMs) like OpenAI's GPT series in aiding the creation of exercises for Automated Programming Assessment Systems (APAS). By examining how LLMs can generate, modify, or enrich programming problems, the study aspires to unlock novel methodologies to keep APAS content diverse, relevant, and aligned with evolving educational needs.</td>
+                        <td colspan="3">This research aims to delve into the capabilities of large language models
+                            (LLMs) like OpenAI's GPT series in aiding the creation of exercises for Automated
+                            Programming Assessment Systems (APAS). By examining how LLMs can generate, modify, or enrich
+                            programming problems, the study aspires to unlock novel methodologies to keep APAS content
+                            diverse, relevant, and aligned with evolving educational needs.</td>
                     </tr>
-            
-                    <tr class="clickable-row" data-toggle="collapse" data-target="#topic6" aria-expanded="false" aria-controls="topic7">
-                        <td>Assessing the Reliability and Validity of Automated Feedback from ChatGPT in Programming Scenarios</td>
+
+                    <tr class="clickable-row" data-toggle="collapse" data-target="#topic6" aria-expanded="false"
+                        aria-controls="topic7">
+                        <td>Assessing the Reliability and Validity of Automated Feedback from ChatGPT in Programming
+                            Scenarios</td>
                         <td>BSC</td>
                         <td>CS</td>
                     </tr>
                     <tr id="topic6" class="collapse">
-                        <td colspan="3">This research focuses on evaluating the reliability and validity of feedback provided by ChatGPT when used in programming contexts. By examining the consistency, accuracy, and relevance of ChatGPT's responses to coding queries and problems, the study intends to determine the system's efficacy and trustworthiness as an automated feedback tool in educational programming environments.</td>
+                        <td colspan="3">This research focuses on evaluating the reliability and validity of feedback
+                            provided by ChatGPT when used in programming contexts. By examining the consistency,
+                            accuracy, and relevance of ChatGPT's responses to coding queries and problems, the study
+                            intends to determine the system's efficacy and trustworthiness as an automated feedback tool
+                            in educational programming environments.</td>
                     </tr>
                 </tbody>
             </table>
-            
+
         </section>
     </div>
-    
+
 
 
     <footer class="bg-light py-3 mt-5">
