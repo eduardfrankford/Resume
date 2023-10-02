@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eduard Frankford, PhD</title>
+    <title>Eduard Frankford </title>
 
     <!-- Bootstrap CSS -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
@@ -24,6 +24,21 @@
     .custom-navbar .nav-link {
         font-size: 1rem;  /* increased font size for navbar text */
     }
+
+    .clickable-row {
+        cursor: pointer;
+    }
+
+    .clickable-row:hover {
+        background-color: #f5f5f5;
+    }
+
+    .fa-chevron-down, .fa-chevron-up {
+        float: right;
+    }
+
+
+
 </style>
 <body>
 
@@ -104,38 +119,71 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
+                    <tr class="clickable-row" data-toggle="collapse" data-target="#topic1" aria-expanded="false" aria-controls="topic1">
+                        <td>Development and Implementation of an AI-Driven Test Feedback System using OpenAI's GPT API</td>
+                        <td>BSC/MSC</td>
+                        <td>CS</td>
+                    </tr>
+                    <tr id="topic1" class="collapse">
+                        <td colspan="3">Detailed explanation for topic 1...</td>
+                    </tr>
+            
+                    <tr class="clickable-row" data-toggle="collapse" data-target="#topic2" aria-expanded="false" aria-controls="topic2">
                         <td>Comparative Analysis of Student Performance in Automated Programming Assessment Systems Before and After the Integration of ChatGPT</td>
                         <td>BSC</td>
                         <td>CS</td>
                     </tr>
-                    <tr>
+                    <tr id="topic2" class="collapse">
+                        <td colspan="3">Detailed explanation for topic 2...</td>
+                    </tr>
+            
+                    <tr class="clickable-row" data-toggle="collapse" data-target="#topic3" aria-expanded="false" aria-controls="topic3">
                         <td>A Systematic Literature Review of the Applications of Large Language Models (like ChatGPT) in Automated Programming Assessment Systems</td>
                         <td>BSC</td>
                         <td>CS</td>
                     </tr>
-                    <tr>
+                    <tr id="topic3" class="collapse">
+                        <td colspan="3">Detailed explanation for topic 3...</td>
+                    </tr>
+            
+                    <tr class="clickable-row" data-toggle="collapse" data-target="#topic4" aria-expanded="false" aria-controls="topic4">
                         <td>A Comprehensive Overview of the Impact of Automated Programming Assessment Systems on Teachers and Learners</td>
                         <td>BSC</td>
                         <td>CS</td>
                     </tr>
-                    <tr>
+                    <tr id="topic4" class="collapse">
+                        <td colspan="3">Detailed explanation for topic 4...</td>
+                    </tr>
+            
+                    <tr class="clickable-row" data-toggle="collapse" data-target="#topic5" aria-expanded="false" aria-controls="topic5">
                         <td>An Exploration of the Potential Uses of Large Language Models in Facilitating Exercise Generation for Automated Programming Assessment Systems</td>
-                        <td>BSC</td>
+                        <td>BSC/MSC</td>
                         <td>CS</td>
                     </tr>
-                    <tr>
+                    <tr id="topic5" class="collapse">
+                        <td colspan="3">Detailed explanation for topic 5...</td>
+                    </tr>
+            
+                    <tr class="clickable-row" data-toggle="collapse" data-target="#topic6" aria-expanded="false" aria-controls="topic6">
                         <td>Predictive Modeling: Forecasting Student Performance in Programming Using Insights from ChatGPT Interactions</td>
-                        <td>BSC</td>
+                        <td>BSC/MSC</td>
                         <td>CS</td>
                     </tr>
-                    <tr>
+                    <tr id="topic6" class="collapse">
+                        <td colspan="3">Detailed explanation for topic 6...</td>
+                    </tr>
+            
+                    <tr class="clickable-row" data-toggle="collapse" data-target="#topic7" aria-expanded="false" aria-controls="topic7">
                         <td>Assessing the Reliability and Validity of Automated Feedback from ChatGPT in Programming Scenarios</td>
                         <td>BSC</td>
                         <td>CS</td>
                     </tr>
+                    <tr id="topic7" class="collapse">
+                        <td colspan="3">Detailed explanation for topic 7...</td>
+                    </tr>
                 </tbody>
             </table>
+            
         </section>
     </div>
     
@@ -148,3 +196,16 @@
 </body>
 
 </html>
+<script>
+    $(document).ready(function(){
+        $(".clickable-row").click(function(){
+            var target = $(this).data("target");
+            if($(target).hasClass("show")) {
+                $(this).find(".fas").removeClass("fa-chevron-up").addClass("fa-chevron-down");
+            } else {
+                $(this).find(".fas").removeClass("fa-chevron-down").addClass("fa-chevron-up");
+            }
+        });
+    });
+
+</script>
