@@ -53,6 +53,25 @@
     .fa-chevron-up {
         float: right;
     }
+        .icons {
+        display: flex;
+        align-items: center;
+    }
+
+    .icon {
+        width: 50px;
+        height: 50px;
+        color: #0077b5;
+    }
+    .list-group-item a {
+        display: block;
+        color: inherit;
+        text-decoration: none;
+    }
+
+    .list-group-item:hover {
+        background-color: #f5f5f5;
+    }
 </style>
 
 <body>
@@ -83,7 +102,7 @@
             <h2>Profile</h2>
             <div class="row">
                 <div class="col-md-4">
-                    <img src="img/me.jpeg" alt="Eduard Frankford's Picture" class="img-fluid rounded-circle mb-3">
+                    <img src="img/me.jpeg" alt="Eduard Frankford" class="img-fluid rounded-circle mb-3">
                 </div>
                 <div class="col-md-8">
                     <p>
@@ -97,9 +116,14 @@
                         Austria - Europe<br>
                         <br>
                         Email: Firstname.Secondname [AT_NOSPAM] uibk.ac.at<br>
+                        <div class="icons">
                         <a href="https://www.linkedin.com/in/eduard-frankford/" target="_blank">
-                            <i class="fab fa-linkedin fa-2x" style="color: #0077b5;"></i>
+                            <i class="fab fa-linkedin fa-2x"></i>
                         </a>
+                        <a href="https://scholar.google.com/citations?hl=de&user=c0KeWz8AAAAJ" target="_blank">
+                            <img src="./img/google_scholar.png" alt="Google Scholar" class="icon">
+                        </a>
+                        </div>
                     </p>
                 </div>
             </div>
@@ -112,10 +136,10 @@
             <ul class="list-group">
                 <li class="list-group-item"><i class="fas fa-check-circle" style="color: #0077b5;"></i> Applications of
                     Artificial Intelligence in Automated Programming Assessment Systems</li>
-                <li class="list-group-item"><i class="fas fa-check-circle" style="color: #0077b5;"></i> Scientific
+                    <li class="list-group-item"><i class="fas fa-check-circle" style="color: #0077b5;"></i> Online Integrated Development Environments</li>
+
+                    <li class="list-group-item"><i class="fas fa-check-circle" style="color: #0077b5;"></i> Scientific
                     Testing of User Experience</li>
-                <li class="list-group-item"><i class="fas fa-check-circle" style="color: #0077b5;"></i> Drivers behind
-                    the Sharing Economy</li>
             </ul>
         </section>
     </div>
@@ -141,33 +165,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr class="clickable-row" data-toggle="collapse" data-target="#topic1" aria-expanded="false"
-                        aria-controls="topic1">
-                        <td>Development and Implementation of an AI-Driven Test Feedback System using OpenAI's GPT API
-                            for Automated Programming Assessment</td>
-                        <td>BSC/MSC</td>
-                        <td>CS</td>
-                    </tr>
-                    <tr id="topic1" class="collapse">
-                        <td colspan="3">In the realm of automated programming assessments, unit tests play a pivotal
-                            role in determining the correctness and efficiency of submitted code. While these tests can
-                            indicate where the code fails, they often fall short in providing qualitative feedback on
-                            why a particular piece of code may have failed or how to rectify the mistake.
-
-                            By integrating the capabilities of OpenAI's GPT API, this system seeks to bridge this
-                            feedback gap. The AI-driven system will examine failing code in conjunction with the
-                            associated unit test failure, attempting to ascertain the underlying mistake. The feedback
-                            will then be enriched with detailed insights, offering suggestions, or pinpointing errors,
-                            assisting the programmer in understanding and rectifying their mistake.
-
-                            This approach promises to not only make feedback more informative but also aid in the
-                            learning process, ensuring that coders don't just identify their errors, but truly
-                            understand them, fostering deeper learning and better coding practices.
-
-                            In summary, the thesis will address a significant limitation in traditional automated
-                            programming assessments by leveraging the advanced capabilities of a large language model,
-                            offering a more holistic, informative, and educational feedback system for programmers.</td>
-                    </tr>
+                    
 
                     <tr class="clickable-row" data-toggle="collapse" data-target="#topic2" aria-expanded="false"
                         aria-controls="topic2">
@@ -183,21 +181,7 @@
                             students' understanding and problem-solving capabilities in programming tasks.</td>
                     </tr>
 
-                    <tr class="clickable-row" data-toggle="collapse" data-target="#topic3" aria-expanded="false"
-                        aria-controls="topic3">
-                        <td>A Systematic Literature Review of the Applications of Large Language Models (like ChatGPT)
-                            in Automated Programming Assessment Systems</td>
-                        <td>BSC</td>
-                        <td>CS</td>
-                    </tr>
-                    <tr id="topic3" class="collapse">
-                        <td colspan="3">The review aims to present a comprehensive picture of the current state of
-                            research in this intersection of AI and education. It will shed light on the real-world
-                            impacts of integrating models like ChatGPT in APAS, providing educators, researchers, and
-                            developers with a clearer understanding of the benefits, challenges, and future
-                            possibilities.</td>
-                    </tr>
-
+    
                     <tr class="clickable-row" data-toggle="collapse" data-target="#topic4" aria-expanded="false"
                         aria-controls="topic4">
                         <td>A Comprehensive Overview of the Impact of Automated Programming Assessment Systems on
@@ -255,23 +239,34 @@
             <h2>Publications</h2>
             <ul class="list-group">
                 <li class="list-group-item">
-                    <i class="fas fa-check-circle" style="color: #0077b5;"></i>
-                    Frankford, Eduard; Sauerwein, Clemens; Asner, Patrick; Krusche, Stefan; Breu, Ruth (2024):
-                    AI-Tutoring in Software Engineering Education. Accepted for publication at the International
-                    Conference on Software Engineering - Software Engineering Education and Training Track (ICSE SEET
-                    2024)
+                    <a href="https://arxiv.org/pdf/2404.02548" target="_blank">
+                        <i class="fas fa-check-circle" style="color: #0077b5;"></i>
+                        Frankford, Eduard; Sauerwein, Clemens; Bassner, Patrick; Krusche, Stefan; Breu, Ruth (2024):
+                        AI-Tutoring in Software Engineering Education. (ICSE SEET 2024)
+                    </a>
                 </li>
                 <li class="list-group-item">
-                    <i class="fas fa-check-circle" style="color: #0077b5;"></i> 
-                    Frankford, E.; Crazzolara, D.; Sauerwein, C.; Vierhauser, M.; Breu, R. (2024). 
-                    Requirements for an Online Integrated Development Environment for Automated Programming Assessment Systems. 
-                    Accepted for publication at the International Conference on Computer Supported Education (CSEDU 2024)
+                    <a href="/pdfs/CSEDU2024.pdf" target="_blank">
+                        <i class="fas fa-check-circle" style="color: #0077b5;"></i> 
+                        Frankford, E.; Crazzolara, D.; Sauerwein, C.; Vierhauser, M.; Breu, R. (2024). 
+                        Requirements for an Online Integrated Development Environment for Automated Programming Assessment Systems. 
+                        (CSEDU 2024)
+                    </a>
                 </li>
                 <li class="list-group-item">
-                    <i class="fas fa-check-circle" style="color: #0077b5;"></i> 
-                    Bassner, Patrick; Frankford, Eduard; Krusche, Stephan (2024): 
-                    AIVT: An AI-Driven Virtual Tutor for Computer Science Education. 
-                    Accepted for publication at ITiCSE 2024.
+                    <a href="https://arxiv.org/pdf/2405.08008" target="_blank">
+                        <i class="fas fa-check-circle" style="color: #0077b5;"></i> 
+                        Bassner, Patrick; Frankford, Eduard; Krusche, Stephan (2024): 
+                        AIVT: An AI-Driven Virtual Tutor for Computer Science Education. (ITiCSE 2024)
+                    </a>
+                </li>
+                <li class="list-group-item">
+                    <a href="/pdfs/CSEET2024.pdf" target="_blank">
+                        <i class="fas fa-check-circle" style="color: #0077b5;"></i>
+                        Frankford, Eduard; Höhn, Ingo; Sauerwein, Clemens; Breu, Ruth (2024): 
+                        A Survey Study on the State of the Art of Programming Exercise Generation using Large Language Models. 
+                        Accepted for publication at the Conference on Software Engineering Education and Training (CSEE&T 2024)
+                    </a>
                 </li>
                 <!-- More list items here for each publication -->
             </ul>
