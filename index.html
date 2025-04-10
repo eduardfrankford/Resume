@@ -1,311 +1,311 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eduard Frankford</title>
-
-    <!-- Bootstrap CSS -->
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
-    <!-- Optional Bootstrap JavaScript -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            $(".clickable-row").click(function () {
-                var target = $(this).data("target");
-                if ($(target).hasClass("show")) {
-                    $(this).find(".fas").removeClass("fa-chevron-up").addClass("fa-chevron-down");
-                } else {
-                    $(this).find(".fas").removeClass("fa-chevron-down").addClass("fa-chevron-up");
-                }
-            });
-        });
-    </script>
-</head>
-<style>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eduard Frankford</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Optional Bootstrap JavaScript -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $(".clickable-row").click(function () {
+        var target = $(this).data("target");
+        if ($(target).hasClass("show")) {
+          $(this).find(".fas").removeClass("fa-chevron-up").addClass("fa-chevron-down");
+        } else {
+          $(this).find(".fas").removeClass("fa-chevron-down").addClass("fa-chevron-up");
+        }
+      });
+    });
+  </script>
+  <style>
     .custom-navbar {
-        padding: 1rem 1rem !important;
+      padding: 1rem 1rem !important;
     }
-
     .custom-navbar .navbar-brand,
     .custom-navbar .nav-link {
-        font-size: 1rem;
+      font-size: 1rem;
     }
-
     .clickable-row {
-        cursor: pointer;
+      cursor: pointer;
     }
-
     .clickable-row:hover {
-        background-color: #f5f5f5;
+      background-color: #f5f5f5;
     }
-
     .fa-chevron-down,
     .fa-chevron-up {
-        float: right;
+      float: right;
     }
-
     .icons {
-        display: flex;
-        align-items: center;
+      display: flex;
+      align-items: center;
     }
-
     .icon {
-        width: 50px;
-        height: 50px;
-        color: #0077b5;
+      width: 50px;
+      height: 50px;
+      color: #0077b5;
     }
-
     .list-group-item a {
-        display: block;
-        color: inherit;
-        text-decoration: none;
+      display: block;
+      color: inherit;
+      text-decoration: none;
     }
-
     .list-group-item:hover {
-        background-color: #f5f5f5;
+      background-color: #f5f5f5;
     }
-</style>
-
+  </style>
+</head>
 <body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top custom-navbar">
+    <a class="navbar-brand" href="#">Eduard Frankford</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#research-interests">Research Interests</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#theses">Theses Topics</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#publications">Publications</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top custom-navbar">
-        <a class="navbar-brand" href="#">Eduard Frankford</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#research-interests">Research Interests</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#theses">Theses Topics</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#publications">Publications</a>
-                </li>
-            </ul>
+  <div>
+    <section id="profile" class="container my-4">
+      <h2>Profile</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <img src="img/me.jpeg" alt="Eduard Frankford" class="img-fluid rounded-circle mb-3">
         </div>
-    </nav>
-
-    <div>
-        <section id="profile" class="container my-4">
-            <h2>Profile</h2>
-            <div class="row">
-                <div class="col-md-4">
-                    <img src="img/me.jpeg" alt="Eduard Frankford" class="img-fluid rounded-circle mb-3">
-                </div>
-                <div class="col-md-8">
-                    <p>
-                        <strong>PhD Researcher</strong><br>
-                        University of Innsbruck<br>
-                        Department of Computer Science<br><br>
-                        ICT Building Room 3M02<br>
-                        Technikerstraße 21a<br>
-                        A-6020 Innsbruck<br>
-                        Austria - Europe<br><br>
-                        Email: Firstname.Secondname [AT_NOSPAM] uibk.ac.at<br>
-                        <div class="icons">
-                            <a href="https://www.linkedin.com/in/eduard-frankford/" target="_blank">
-                                <i class="fab fa-linkedin fa-2x"></i>
-                            </a>
-                            <a href="https://scholar.google.com/citations?hl=de&user=c0KeWz8AAAAJ" target="_blank">
-                                <img src="./img/google_scholar.png" alt="Google Scholar" class="icon">
-                            </a>
-                        </div>
-                    </p>
-                </div>
+        <div class="col-md-8">
+          <p>
+            <strong>PhD Researcher</strong><br>
+            University of Innsbruck<br>
+            Department of Computer Science<br><br>
+            ICT Building Room 3M02<br>
+            Technikerstraße 21a<br>
+            A-6020 Innsbruck<br>
+            Austria - Europe<br><br>
+            Email: Firstname.Secondname [AT_NOSPAM] uibk.ac.at<br>
+            <div class="icons">
+              <a href="https://www.linkedin.com/in/eduard-frankford/" target="_blank">
+                <i class="fab fa-linkedin fa-2x"></i>
+              </a>
+              <a href="https://scholar.google.com/citations?hl=de&user=c0KeWz8AAAAJ" target="_blank">
+                <img src="./img/google_scholar.png" alt="Google Scholar" class="icon">
+              </a>
             </div>
-        </section>
-    </div>
+          </p>
+        </div>
+      </div>
+    </section>
+  </div>
 
-    <div class="bg-light p-md-4">
-        <section id="research-interests" class="container my-4">
-            <h2>Research Interests</h2>
-            <ul class="list-group">
-                <li class="list-group-item">
-                    <i class="fas fa-check-circle" style="color: #0077b5;"></i> Applications of Artificial Intelligence in Automated Programming Assessment Systems
-                </li>
-                <li class="list-group-item">
-                    <i class="fas fa-check-circle" style="color: #0077b5;"></i> Online Integrated Development Environments
-                </li>
-                <li class="list-group-item">
-                    <i class="fas fa-check-circle" style="color: #0077b5;"></i> Scientific Testing of User Experience
-                </li>
-            </ul>
-        </section>
-    </div>
+  <div class="bg-light p-md-4">
+    <section id="research-interests" class="container my-4">
+      <h2>Research Interests</h2>
+      <ul class="list-group">
+        <li class="list-group-item">
+          <i class="fas fa-check-circle" style="color: #0077b5;"></i> Applications of Artificial Intelligence in Automated Programming Assessment Systems
+        </li>
+        <li class="list-group-item">
+          <i class="fas fa-check-circle" style="color: #0077b5;"></i> Online Integrated Development Environments
+        </li>
+        <li class="list-group-item">
+          <i class="fas fa-check-circle" style="color: #0077b5;"></i> Scientific Testing of User Experience
+        </li>
+      </ul>
+    </section>
+  </div>
 
-    <div class="p-md-4">
-        <section id="theses" class="container my-4">
-            <h2>Available Theses Topics</h2>
-            <p>
-                I provide guidance on topics suitable for seminars (SE), bachelor's (BSC), and master's (MSC) theses,
-                primarily within the disciplines of computer science (CS), software engineering (SE), and information
-                systems (IS). I mentor students from the University of Innsbruck and various other European
-                institutions. Below is a compilation of potential thesis topics. Should any of these pique your
-                interest, I welcome you to reach out.
-            </p>
-            <table class="table table-bordered">
-                <thead>
-                    <tr>
-                        <th>Title</th>
-                        <th>Type</th>
-                        <th>Study</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr class="clickable-row" data-toggle="collapse" data-target="#topic2" aria-expanded="false" aria-controls="topic2">
-                        <td>Comparative Analysis of Student Performance in Automated Programming Assessment Systems Before and After the Integration of ChatGPT</td>
-                        <td>BSC</td>
-                        <td>CS</td>
-                    </tr>
-                    <tr id="topic2" class="collapse">
-                        <td colspan="3">
-                            This study sets out to analyze the impact of ChatGPT on student performance. By comparing student results before and after the introduction of ChatGPT, the research aims to determine if the feedback and guidance provided by ChatGPT positively or negatively affect students' understanding and problem-solving capabilities in programming tasks.
-                        </td>
-                    </tr>
-                    <tr class="clickable-row" data-toggle="collapse" data-target="#topic4" aria-expanded="false" aria-controls="topic4">
-                        <td>A Comprehensive Overview of the Impact of Automated Programming Assessment Systems on Teachers and Learners</td>
-                        <td>BSC</td>
-                        <td>CS</td>
-                    </tr>
-                    <tr id="topic4" class="collapse">
-                        <td colspan="3">
-                            This research delves into the multifaceted effects of Automated Programming Assessment Systems (APAS) on both educators and students within computer science education. It seeks to explore the benefits, challenges, and unintended consequences that emerge from automating the process of evaluating programming tasks, shedding light on how APAS transforms the pedagogical landscape.
-                        </td>
-                    </tr>
-                    <tr class="clickable-row" data-toggle="collapse" data-target="#topic5" aria-expanded="false" aria-controls="topic5">
-                        <td>An Exploration of the Potential Uses of Large Language Models in Facilitating Exercise Generation for Automated Programming Assessment Systems</td>
-                        <td>BSC/MSC</td>
-                        <td>CS</td>
-                    </tr>
-                    <tr id="topic5" class="collapse">
-                        <td colspan="3">
-                            This research aims to delve into the capabilities of large language models (LLMs) like OpenAI's GPT series in aiding the creation of exercises for Automated Programming Assessment Systems (APAS). By examining how LLMs can generate, modify, or enrich programming problems, the study aspires to unlock novel methodologies to keep APAS content diverse, relevant, and aligned with evolving educational needs.
-                        </td>
-                    </tr>
-                    <tr class="clickable-row" data-toggle="collapse" data-target="#topic6" aria-expanded="false" aria-controls="topic6">
-                        <td>Assessing the Reliability and Validity of Automated Feedback from ChatGPT in Programming Scenarios</td>
-                        <td>BSC</td>
-                        <td>CS</td>
-                    </tr>
-                    <tr id="topic6" class="collapse">
-                        <td colspan="3">
-                            This research focuses on evaluating the reliability and validity of feedback provided by ChatGPT when used in programming contexts. By examining the consistency, accuracy, and relevance of ChatGPT's responses to coding queries and problems, the study intends to determine the system's efficacy and trustworthiness as an automated feedback tool in educational programming environments.
-                        </td>
-                    </tr>
-                    <tr class="clickable-row" data-toggle="collapse" data-target="#topic7" aria-expanded="false" aria-controls="topic7">
-                        <td>Automated Exercise Generation with LLMs: A Theoretical Approach to Course Generation</td>
-                        <td>BSC/MSC</td>
-                        <td>CS</td>
-                    </tr>
-                    <tr id="topic7" class="collapse">
-                        <td colspan="3">
-                            Review literature on LLM-based exercise generation and evaluation methods to identify key features and assessment criteria.<br>
-                            Develop prompt engineering strategies to instruct the LLM to create new exercises that align with educational objectives while differing from previous tasks.<br>
-                            Define a theoretical pipeline that includes data collection, exercise generation, quality filtering, and evaluation based on the metrics found in literature.<br>
-                            Propose a process for gathering and analyzing instructor feedback to iteratively refine the exercise generation approach.
-                        </td>
-                    </tr>
-                    <tr class="clickable-row" data-toggle="collapse" data-target="#topic8" aria-expanded="false" aria-controls="topic8">
-                        <td>A Systematic Literature Review on University-Level Transformations in Computer Science Education in the Era of Large Language Models</td>
-                        <td>BSC/MSC</td>
-                        <td>CS</td>
-                    </tr>
-                    <tr id="topic8" class="collapse">
-                        <td colspan="3">
-                            Compile and synthesize literature on how large language models have influenced teaching practices in computer science at the university level.<br>
-                            Analyze changes in curriculum design, pedagogical methods, and assessment strategies reported in the literature.<br>
-                            Evaluate the benefits, challenges, and ethical concerns associated with integrating LLMs in computer science education.<br>
-                            Compare empirical findings and case studies across different institutions to identify common trends and divergent practices.<br>
-                            Identify gaps in the current literature and propose directions for future research in this domain.
-                        </td>
-                    </tr>
-                    <tr class="clickable-row" data-toggle="collapse" data-target="#topic9" aria-expanded="false" aria-controls="topic9">
-                        <td>Automated Exercise Generation with LLMs: Developing a Pipeline for Course Generation in Artemis</td>
-                        <td>BSC/MSC</td>
-                        <td>CS</td>
-                    </tr>
-                    <tr id="topic9" class="collapse">
-                        <td colspan="3">
-                            Review related literature on LLM-based exercise generation and how LLM-based exercises can be evaluated.<br>
-                            Document the design and implementation of a pipeline that exports a new Artemis course with tasks similar but not identical to last semester.<br>
-                            Optional: Collect instructor evaluations for the new AI-generated tasks.<br>
-                            Optional: Analyze the evaluation data to assess the quality of the generated exercises and identify improvement areas.
-                        </td>
-                    </tr>
-                    <tr class="clickable-row" data-toggle="collapse" data-target="#topic10" aria-expanded="false" aria-controls="topic10">
-                        <td>A Systematic Literature Review on Strategies to Mitigate LLM-Assisted Cheating in University Assessments</td>
-                        <td>BSC/MSC</td>
-                        <td>CS</td>
-                    </tr>
-                    <tr id="topic10" class="collapse">
-                        <td colspan="3">
-                            Introduce the problem of LLM-assisted cheating in university assessments and define key research questions.<br>
-                            Categorize and summarize existing strategies and technological measures to mitigate cheating.<br>
-                            Critically assess the effectiveness, limitations, and ethical implications of each strategy.<br>
-                            Identify research gaps and propose future directions to enhance academic integrity in the era of LLMs.
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-    </div>
+  <div class="p-md-4">
+    <section id="theses" class="container my-4">
+      <h2>Available Theses Topics</h2>
+      <p>
+        I provide guidance on topics suitable for seminars (SE), bachelor's (BSC), and master's (MSC) theses,
+        primarily within the disciplines of computer science (CS), software engineering (SE), and information
+        systems (IS). I mentor students from the University of Innsbruck and various other European
+        institutions. Below is a compilation of potential thesis topics. Should any of these pique your
+        interest, I welcome you to reach out.
+      </p>
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Type</th>
+            <th>Study</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="clickable-row" data-toggle="collapse" data-target="#topic2" aria-expanded="false" aria-controls="topic2">
+            <td>Comparative Analysis of Student Performance in Automated Programming Assessment Systems Before and After the Integration of ChatGPT</td>
+            <td>BSC</td>
+            <td>CS</td>
+          </tr>
+          <tr>
+            <td colspan="3">
+              <div id="topic2" class="collapse">
+                This study sets out to analyze the impact of ChatGPT on student performance. By comparing student results before and after the introduction of ChatGPT, the research aims to determine if the feedback and guidance provided by ChatGPT positively or negatively affect students' understanding and problem-solving capabilities in programming tasks.
+              </div>
+            </td>
+          </tr>
+          <tr class="clickable-row" data-toggle="collapse" data-target="#topic4" aria-expanded="false" aria-controls="topic4">
+            <td>A Comprehensive Overview of the Impact of Automated Programming Assessment Systems on Teachers and Learners</td>
+            <td>BSC</td>
+            <td>CS</td>
+          </tr>
+          <tr>
+            <td colspan="3">
+              <div id="topic4" class="collapse">
+                This research delves into the multifaceted effects of Automated Programming Assessment Systems (APAS) on both educators and students within computer science education. It seeks to explore the benefits, challenges, and unintended consequences that emerge from automating the process of evaluating programming tasks, shedding light on how APAS transforms the pedagogical landscape.
+              </div>
+            </td>
+          </tr>
+          <tr class="clickable-row" data-toggle="collapse" data-target="#topic5" aria-expanded="false" aria-controls="topic5">
+            <td>An Exploration of the Potential Uses of Large Language Models in Facilitating Exercise Generation for Automated Programming Assessment Systems</td>
+            <td>BSC/MSC</td>
+            <td>CS</td>
+          </tr>
+          <tr>
+            <td colspan="3">
+              <div id="topic5" class="collapse">
+                This research aims to delve into the capabilities of large language models (LLMs) like OpenAI's GPT series in aiding the creation of exercises for Automated Programming Assessment Systems (APAS). By examining how LLMs can generate, modify, or enrich programming problems, the study aspires to unlock novel methodologies to keep APAS content diverse, relevant, and aligned with evolving educational needs.
+              </div>
+            </td>
+          </tr>
+          <tr class="clickable-row" data-toggle="collapse" data-target="#topic6" aria-expanded="false" aria-controls="topic6">
+            <td>Assessing the Reliability and Validity of Automated Feedback from ChatGPT in Programming Scenarios</td>
+            <td>BSC</td>
+            <td>CS</td>
+          </tr>
+          <tr>
+            <td colspan="3">
+              <div id="topic6" class="collapse">
+                This research focuses on evaluating the reliability and validity of feedback provided by ChatGPT when used in programming contexts. By examining the consistency, accuracy, and relevance of ChatGPT's responses to coding queries and problems, the study intends to determine the system's efficacy and trustworthiness as an automated feedback tool in educational programming environments.
+              </div>
+            </td>
+          </tr>
+          <tr class="clickable-row" data-toggle="collapse" data-target="#topic7" aria-expanded="false" aria-controls="topic7">
+            <td>Automated Exercise Generation with LLMs: A Theoretical Approach to Course Generation</td>
+            <td>BSC/MSC</td>
+            <td>CS</td>
+          </tr>
+          <tr>
+            <td colspan="3">
+              <div id="topic7" class="collapse">
+                Review literature on LLM-based exercise generation and evaluation methods to identify key features and assessment criteria.<br>
+                Develop prompt engineering strategies to instruct the LLM to create new exercises that align with educational objectives while differing from previous tasks.<br>
+                Define a theoretical pipeline that includes data collection, exercise generation, quality filtering, and evaluation based on the metrics found in literature.<br>
+                Propose a process for gathering and analyzing instructor feedback to iteratively refine the exercise generation approach.
+              </div>
+            </td>
+          </tr>
+          <tr class="clickable-row" data-toggle="collapse" data-target="#topic8" aria-expanded="false" aria-controls="topic8">
+            <td>A Systematic Literature Review on University-Level Transformations in Computer Science Education in the Era of Large Language Models</td>
+            <td>BSC/MSC</td>
+            <td>CS</td>
+          </tr>
+          <tr>
+            <td colspan="3">
+              <div id="topic8" class="collapse">
+                Compile and synthesize literature on how large language models have influenced teaching practices in computer science at the university level.<br>
+                Analyze changes in curriculum design, pedagogical methods, and assessment strategies reported in the literature.<br>
+                Evaluate the benefits, challenges, and ethical concerns associated with integrating LLMs in computer science education.<br>
+                Compare empirical findings and case studies across different institutions to identify common trends and divergent practices.<br>
+                Identify gaps in the current literature and propose directions for future research in this domain.
+              </div>
+            </td>
+          </tr>
+          <tr class="clickable-row" data-toggle="collapse" data-target="#topic9" aria-expanded="false" aria-controls="topic9">
+            <td>Automated Exercise Generation with LLMs: Developing a Pipeline for Course Generation in Artemis</td>
+            <td>BSC/MSC</td>
+            <td>CS</td>
+          </tr>
+          <tr>
+            <td colspan="3">
+              <div id="topic9" class="collapse">
+                Review related literature on LLM-based exercise generation and how LLM-based exercises can be evaluated.<br>
+                Document the design and implementation of a pipeline that exports a new Artemis course with tasks similar but not identical to last semester.<br>
+                Optional: Collect instructor evaluations for the new AI-generated tasks.<br>
+                Optional: Analyze the evaluation data to assess the quality of the generated exercises and identify improvement areas.
+              </div>
+            </td>
+          </tr>
+          <tr class="clickable-row" data-toggle="collapse" data-target="#topic10" aria-expanded="false" aria-controls="topic10">
+            <td>A Systematic Literature Review on Strategies to Mitigate LLM-Assisted Cheating in University Assessments</td>
+            <td>BSC/MSC</td>
+            <td>CS</td>
+          </tr>
+          <tr>
+            <td colspan="3">
+              <div id="topic10" class="collapse">
+                Introduce the problem of LLM-assisted cheating in university assessments and define key research questions.<br>
+                Categorize and summarize existing strategies and technological measures to mitigate cheating.<br>
+                Critically assess the effectiveness, limitations, and ethical implications of each strategy.<br>
+                Identify research gaps and propose future directions to enhance academic integrity in the era of LLMs.
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </div>
 
-    <!-- Publications Section -->
-    <div class="bg-light p-md-4">
-        <section id="publications" class="container my-4">
-            <h2>Publications</h2>
-            <ul class="list-group">
-                <li class="list-group-item">
-                    <a href="https://dl.acm.org/doi/pdf/10.1145/3639474.3640061" target="_blank">
-                        <i class="fas fa-check-circle" style="color: #0077b5;"></i>
-                        Eduard Frankford, Clemens Sauerwein, Patrick Bassner, Stephan Krusche, and Ruth Breu. 2024. AI-Tutoring in Software Engineering Education. In Proceedings of the 46th International Conference on Software Engineering: Software Engineering Education and Training (ICSE-SEET '24). Association for Computing Machinery, New York, NY, USA, 309–319. https://doi.org/10.1145/3639474.3640061
-                    </a>
-                </li>
-                <li class="list-group-item">
-                    <a href="https://www.scitepress.org/Papers/2024/125564/125564.pdf" target="_blank">
-                        <i class="fas fa-check-circle" style="color: #0077b5;"></i>
-                        Frankford, Eduard, et al. "Requirements for an Online Integrated Development Environment for Automated Programming Assessment Systems." CSEDU (1). 2024.
-                    </a>
-                </li>
-                <li class="list-group-item">
-                    <a href="https://dl.acm.org/doi/pdf/10.1145/3649217.3653543" target="_blank">
-                        <i class="fas fa-check-circle" style="color: #0077b5;"></i>
-                        Patrick Bassner, Eduard Frankford, and Stephan Krusche. 2024. Iris: An AI-Driven Virtual Tutor for Computer Science Education. In Proceedings of the 2024 on Innovation and Technology in Computer Science Education V. 1 (ITiCSE 2024). Association for Computing Machinery, New York, NY, USA, 394–400. https://doi.org/10.1145/3649217.3653543
-                    </a>
-                </li>
-                <li class="list-group-item">
-                    <a href="https://ieeexplore.ieee.org/abstract/document/10662990" target="_blank">
-                        <i class="fas fa-check-circle" style="color: #0077b5;"></i>
-                        E. Frankford, I. Höhn, C. Sauerwein and R. Breu, "A Survey Study on the State of the Art of Programming Exercise Generation Using Large Language Models," 2024 36th International Conference on Software Engineering Education and Training (CSEE&T), Würzburg, Germany, 2024, pp. 1-5, doi: 10.1109/CSEET62301.2024.10662990.
-                    </a>
-                </li>
-                <li class="list-group-item">
-                    <a href="https://arxiv.org/pdf/2503.13127" target="_blank">
-                        <i class="fas fa-check-circle" style="color: #0077b5;"></i>
-                        Frankford, Eduard; Crazzolara, Daniel; Vierhauser, Michael; Meissner, Niklas; Krusche, Stephan; Breu, Ruth (2025):
-                        An Online Integrated Development Environment for Automated Programming Assessment Systems.
-                        Proceedings of the 17th International Conference on Computer Supported Education, Vol. 17, pp. 48-59.
-                    </a>
-                </li>
-            </ul>
-        </section>
-    </div>
+  <div class="bg-light p-md-4">
+    <section id="publications" class="container my-4">
+      <h2>Publications</h2>
+      <ul class="list-group">
+        <li class="list-group-item">
+          <a href="https://dl.acm.org/doi/pdf/10.1145/3639474.3640061" target="_blank">
+            <i class="fas fa-check-circle" style="color: #0077b5;"></i>
+            Eduard Frankford, Clemens Sauerwein, Patrick Bassner, Stephan Krusche, and Ruth Breu. 2024. AI-Tutoring in Software Engineering Education. In Proceedings of the 46th International Conference on Software Engineering: Software Engineering Education and Training (ICSE-SEET '24). Association for Computing Machinery, New York, NY, USA, 309–319. https://doi.org/10.1145/3639474.3640061
+          </a>
+        </li>
+        <li class="list-group-item">
+          <a href="https://www.scitepress.org/Papers/2024/125564/125564.pdf" target="_blank">
+            <i class="fas fa-check-circle" style="color: #0077b5;"></i>
+            Frankford, Eduard, et al. "Requirements for an Online Integrated Development Environment for Automated Programming Assessment Systems." CSEDU (1). 2024.
+          </a>
+        </li>
+        <li class="list-group-item">
+          <a href="https://dl.acm.org/doi/pdf/10.1145/3649217.3653543" target="_blank">
+            <i class="fas fa-check-circle" style="color: #0077b5;"></i>
+            Patrick Bassner, Eduard Frankford, and Stephan Krusche. 2024. Iris: An AI-Driven Virtual Tutor for Computer Science Education. In Proceedings of the 2024 on Innovation and Technology in Computer Science Education V. 1 (ITiCSE 2024). Association for Computing Machinery, New York, NY, USA, 394–400. https://doi.org/10.1145/3649217.3653543
+          </a>
+        </li>
+        <li class="list-group-item">
+          <a href="https://ieeexplore.ieee.org/abstract/document/10662990" target="_blank">
+            <i class="fas fa-check-circle" style="color: #0077b5;"></i>
+            E. Frankford, I. Höhn, C. Sauerwein and R. Breu, "A Survey Study on the State of the Art of Programming Exercise Generation Using Large Language Models," 2024 36th International Conference on Software Engineering Education and Training (CSEE&T), Würzburg, Germany, 2024, pp. 1-5, doi: 10.1109/CSEET62301.2024.10662990.
+          </a>
+        </li>
+        <li class="list-group-item">
+          <a href="https://arxiv.org/pdf/2503.13127" target="_blank">
+            <i class="fas fa-check-circle" style="color: #0077b5;"></i>
+            Frankford, Eduard; Crazzolara, Daniel; Vierhauser, Michael; Meissner, Niklas; Krusche, Stephan; Breu, Ruth (2025):
+            An Online Integrated Development Environment for Automated Programming Assessment Systems.
+            Proceedings of the 17th International Conference on Computer Supported Education, Vol. 17, pp. 48-59.
+          </a>
+        </li>
+      </ul>
+    </section>
+  </div>
 
-    <footer class="bg-light py-3">
-        <p class="text-center">&copy; 2024 Eduard Frankford</p>
-    </footer>
-
+  <footer class="bg-light py-3">
+    <p class="text-center">&copy; 2024 Eduard Frankford</p>
+  </footer>
 </body>
-
 </html>
