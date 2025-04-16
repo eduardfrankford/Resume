@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eduard Frankford</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Optional Bootstrap JavaScript -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $(".clickable-row").click(function () {
+        var target = $(this).data("target");
+        if ($(target).hasClass("show")) {
+          $(this).find(".fas").removeClass("fa-chevron-up").addClass("fa-chevron-down");
+        } else {
+          $(this).find(".fas").removeClass("fa-chevron-down").addClass("fa-chevron-up");
+        }
+      });
+    });
+  </script>
+  <style>
+    .custom-navbar {
+      padding: 1rem 1rem !important;
+    }
+    .custom-navbar .navbar-brand,
+    .custom-navbar .nav-link {
+      font-size: 1rem;
+    }
+    .clickable-row {
+      cursor: pointer;
+    }
+    .clickable-row:hover {
+      background-color: #f5f5f5;
+    }
+    .fa-chevron-down,
+    .fa-chevron-up {
+      float: right;
+    }
+    .icons {
+      display: flex;
+      align-items: center;
+    }
+    .icon {
+      width: 50px;
+      height: 50px;
+      color: #0077b5;
+    }
+    .list-group-item a {
+      display: block;
+      color: inherit;
+      text-decoration: none;
+    }
+    .list-group-item:hover {
+      background-color: #f5f5f5;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top custom-navbar">
+    <a class="navbar-brand" href="#">Eduard Frankford</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#research-interests">Research Interests</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#theses">Theses Topics</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#publications">Publications</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="p-md-4">
+    <section id="initial-presentation" class="container my-4">
+      <h2>Initial Thesis Proposal</h2>
+      <p>This preliminary outline serves as your blueprint for a bachelor’s thesis. It is crucial to specify the research gap you intend to fill. A comprehensive proposal should include:</p>
+      <ul>
+        <li>A clear rationale and interpretation of your subject matter</li>
+        <li>An assessment of the latest developments and research in the field</li>
+        <li>An identification of existing research gaps that you will tackle</li>
+        <li>A well-defined research aim with one to three detailed research questions</li>
+        <li>A summary of your intended research strategy and methodological approach</li>
+        <li>A projection of the expected outcomes</li>
+        <li>A tentative schedule marking key milestones</li>
+      </ul>
+      <p>For additional details on available bachelor thesis topics, please return to the <a href="index.html">main page</a>.</p>
+    </section>
+  </div>
+
+  <footer class="bg-light py-3">
+    <p class="text-center">&copy; 2024 Eduard Frankford</p>
+  </footer>
+</body>
+</html>
