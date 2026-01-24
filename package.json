@@ -20,7 +20,6 @@
   },
   "homepage": "http://eduardfrankford.com",
   "devDependencies": {
-    "@webpack-cli/serve": "^1.5.1",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-preset-es2015": "^6.24.1",
