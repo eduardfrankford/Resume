@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha --require babel-core/register",
-    "build": "webpack --mode=production",
-    "watch": "webpack --watch --mode=development"
+    "build": "NODE_OPTIONS=--openssl-legacy-provider webpack --mode=production",
+    "watch": "NODE_OPTIONS=--openssl-legacy-provider webpack --watch --mode=development"
   },
   "repository": {
     "type": "git",
