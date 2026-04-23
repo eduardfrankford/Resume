@@ -6,12 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Eduard Frankford</title>
   <!-- Bootstrap CSS -->
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="vendor/bootstrap/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="vendor/fontawesome/css/all.min.css">
   <!-- Optional Bootstrap JavaScript -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/popper/popper.min.js"></script>
+  <script src="vendor/bootstrap/bootstrap.min.js"></script>
   <script>
     $(document).ready(function () {
       $(".clickable-row").click(function () {
@@ -29,46 +29,209 @@
     });
   </script>
   <style>
+    @font-face {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 100 900;
+      font-display: swap;
+      src: url('fonts/inter-latin.woff2') format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+    @font-face {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 100 900;
+      font-display: swap;
+      src: url('fonts/inter-latin-ext.woff2') format('woff2');
+      unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+    }
+    :root {
+      --accent: #0077b5;
+      --accent-hover: #005a8a;
+      --accent-soft: #e8f4fb;
+      --dark: #1a1d24;
+      --light: #f7f9fb;
+      --text: #2c3039;
+      --muted: #6c757d;
+      --border: #e6eaef;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      color: var(--text);
+      background: #fff;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    h1, h2, h3, h4, h5, h6 { font-weight: 600; letter-spacing: -0.01em; color: #1a1d24; }
+    a { color: var(--accent); }
+    a:hover { color: var(--accent-hover); }
+    section { scroll-margin-top: 80px; }
+    section h2 {
+      position: relative;
+      padding-bottom: 0.6rem;
+      margin-bottom: 1.5rem;
+      font-size: 1.75rem;
+    }
+    section h2::after {
+      content: "";
+      position: absolute;
+      left: 0; bottom: 0;
+      width: 48px; height: 3px;
+      background: var(--accent);
+      border-radius: 2px;
+    }
+
+    /* Navbar */
     .custom-navbar {
-      padding: 1rem 1rem !important;
+      padding: 0.85rem 1rem !important;
+      background: var(--dark) !important;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.08);
     }
-    .custom-navbar .navbar-brand,
+    .custom-navbar .navbar-brand {
+      font-size: 1.15rem;
+      font-weight: 600;
+      letter-spacing: 0.01em;
+    }
     .custom-navbar .nav-link {
-      font-size: 1rem;
+      font-size: 0.95rem;
+      transition: color 0.2s ease;
+      padding: 0.4rem 0.9rem !important;
     }
-    .clickable-row {
-      cursor: pointer;
+    .custom-navbar .nav-link:hover { color: #fff !important; }
+
+    /* Backgrounds */
+    .bg-light { background: var(--light) !important; }
+
+    /* Profile */
+    #profile { padding-top: 1rem; }
+    .profile-img {
+      width: 100%;
+      max-width: 220px;
+      border-radius: 50%;
+      border: 4px solid #fff;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.12);
     }
-    .clickable-row:hover {
-      background-color: #f5f5f5;
-    }
-    .fa-chevron-down,
-    .fa-chevron-up {
-      float: right;
-    }
+    .profile-info p { margin-bottom: 0.35rem; }
+    .profile-info .role { font-size: 1.05rem; font-weight: 600; }
+    .profile-info .muted { color: var(--muted); font-size: 0.94rem; }
+
+    /* Social icons */
     .icons {
       display: flex;
       align-items: center;
+      gap: 0.6rem;
+      margin-top: 1rem;
     }
-    .icon {
-      width: 50px;
-      height: 50px;
-      color: #0077b5;
+    .icons a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 42px; height: 42px;
+      border-radius: 50%;
+      background: #fff;
+      border: 1px solid var(--border);
+      color: var(--accent);
+      text-decoration: none;
+      transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    }
+    .icons a:hover {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #fff;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 14px rgba(0,119,181,0.25);
+    }
+    .icons a i { font-size: 1.2rem; line-height: 1; }
+    .icons a img {
+      width: 22px; height: 22px;
+      transition: filter 0.2s ease;
+    }
+    .icons a:hover img { filter: brightness(0) invert(1); }
+
+    /* List groups */
+    .list-group-item {
+      border-color: var(--border);
+      padding: 0.9rem 1.1rem;
+      transition: background-color 0.15s ease;
     }
     .list-group-item a {
       display: block;
       color: inherit;
       text-decoration: none;
     }
-    .list-group-item:hover {
-      background-color: #f5f5f5;
+    .list-group-item:hover { background: #f1f5fa; }
+    .list-group-item .fa-check-circle { color: var(--accent); margin-right: 0.45rem; }
+
+    /* Project experience */
+    .experience-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--accent);
+      border-radius: 6px;
+      padding: 1.25rem 1.4rem;
+      margin-bottom: 1rem;
+      transition: box-shadow 0.2s ease, transform 0.2s ease;
     }
-    .topic-link {
-      color: inherit;
-      text-decoration: none;
+    .experience-card:hover {
+      box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+      transform: translateY(-1px);
     }
-    .topic-link:hover {
-      text-decoration: underline;
+    .experience-card h4 { font-size: 1.15rem; margin: 0; }
+    .experience-card .role { color: var(--accent); font-weight: 600; }
+    .experience-card .meta { color: var(--muted); font-size: 0.92rem; }
+    .experience-card ul { margin: 0.7rem 0 0; padding-left: 1.1rem; }
+    .experience-card ul li { margin-bottom: 0.3rem; }
+
+    /* Theses table */
+    .table {
+      background: #fff;
+      border-radius: 6px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+    }
+    .table th {
+      background: #f1f5fa;
+      font-weight: 600;
+      border-bottom: 1px solid var(--border) !important;
+      border-top: none !important;
+    }
+    .clickable-row {
+      cursor: pointer;
+      transition: background-color 0.15s ease;
+    }
+    .clickable-row:hover { background-color: #f1f5fa; }
+    .fa-chevron-down, .fa-chevron-up { float: right; }
+    .topic-link { color: inherit; text-decoration: none; }
+    .topic-link:hover { color: var(--accent); text-decoration: underline; }
+
+    /* Assigned badge */
+    .badge-assigned {
+      display: inline-block;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-weight: 600;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      padding: 0.3em 0.65em;
+      border-radius: 4px;
+      margin-left: 0.4rem;
+      vertical-align: middle;
+    }
+
+    /* Footer */
+    footer {
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+      background: #fff !important;
+    }
+    footer p { margin: 0; font-size: 0.9rem; }
+
+    @media (max-width: 767px) {
+      section h2 { font-size: 1.45rem; }
+      .profile-img { max-width: 160px; }
     }
   </style>
 </head>
@@ -100,29 +263,25 @@
   <div>
     <section id="profile" class="container my-4">
       <h2>Profile</h2>
-      <div class="row">
-        <div class="col-md-4">
-          <img src="img/me.jpeg" alt="Eduard Frankford" class="img-fluid rounded-circle mb-3">
+      <div class="row align-items-center">
+        <div class="col-md-4 text-center text-md-left mb-3 mb-md-0">
+          <img src="img/me.jpeg" alt="Eduard Frankford" class="profile-img">
         </div>
-        <div class="col-md-8">
-          <p>
-            <strong>PhD Researcher</strong><br>
-            University of Innsbruck<br>
-            Department of Computer Science<br><br>
-            ICT Building Room 3M02<br>
-            Technikerstraße 21a<br>
-            A-6020 Innsbruck<br>
-            Austria - Europe<br><br>
-            Email: Firstname.Secondname [AT_NOSPAM] uibk.ac.at<br>
-            <div class="icons">
-              <a href="https://www.linkedin.com/in/eduard-frankford/" target="_blank">
-                <i class="fab fa-linkedin fa-2x"></i>
-              </a>
-              <a href="https://scholar.google.com/citations?hl=de&user=c0KeWz8AAAAJ" target="_blank">
-                <img src="./img/google_scholar.png" alt="Google Scholar" class="icon">
-              </a>
-            </div>
-          </p>
+        <div class="col-md-8 profile-info">
+          <p class="role mb-1">PhD Researcher</p>
+          <p class="mb-0">University of Innsbruck</p>
+          <p class="muted mb-3">Department of Computer Science</p>
+          <p class="muted mb-1">ICT Building Room 3M02, Technikerstraße 21a</p>
+          <p class="muted mb-3">A-6020 Innsbruck, Austria &mdash; Europe</p>
+          <p class="mb-0"><span class="muted">Email:</span> Firstname.Secondname [AT_NOSPAM] uibk.ac.at</p>
+          <div class="icons">
+            <a href="https://www.linkedin.com/in/eduard-frankford/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://scholar.google.com/citations?hl=de&user=c0KeWz8AAAAJ" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar">
+              <img src="./img/google_scholar.png" alt="Google Scholar">
+            </a>
+          </div>
         </div>
       </div>
     </section>
@@ -151,14 +310,14 @@
   <div class="p-md-4">
     <section id="project-experience" class="container my-4">
       <h2>Project Experience</h2>
-      <div class="mb-4">
+      <div class="experience-card">
         <div class="d-flex justify-content-between flex-wrap">
-          <h4 class="mb-0">AI Factory Austria (AI:AT)</h4>
-          <span><em>2025 &ndash; Present</em></span>
+          <h4>AI Factory Austria (AI:AT)</h4>
+          <span class="meta">2025 &ndash; Present</span>
         </div>
-        <div class="d-flex justify-content-between flex-wrap mb-2">
-          <strong>Applied AI Expert / LLM Expert</strong>
-          <span>Innsbruck, Austria</span>
+        <div class="d-flex justify-content-between flex-wrap">
+          <span class="role">Applied AI Expert / LLM Expert</span>
+          <span class="meta">Innsbruck, Austria</span>
         </div>
         <ul>
           <li>Advise SMEs on the identification and prioritization of high-impact AI use cases, with a focus on LLM- and RAG-based solutions for industrial applications.</li>
@@ -166,14 +325,14 @@
           <li>Develop and facilitate workshops on LLMs, RAG, and agentic AI to strengthen AI literacy, support strategic decision-making, and accelerate practical adoption.</li>
         </ul>
       </div>
-      <div class="mb-4">
+      <div class="experience-card">
         <div class="d-flex justify-content-between flex-wrap">
-          <h4 class="mb-0">CodeAbility Austria</h4>
-          <span><em>2020 &ndash; 2024</em></span>
+          <h4>CodeAbility Austria</h4>
+          <span class="meta">2020 &ndash; 2024</span>
         </div>
-        <div class="d-flex justify-content-between flex-wrap mb-2">
-          <strong>Project Contributor</strong>
-          <span>Austria</span>
+        <div class="d-flex justify-content-between flex-wrap">
+          <span class="role">Project Contributor</span>
+          <span class="meta">Austria</span>
         </div>
         <ul>
           <li>Helped implement the CodeAbility platform for sharing teaching materials, enabling the exchange and reuse of programming education resources.</li>
@@ -222,7 +381,7 @@
             </td>
           </tr>
             <tr class="clickable-row" data-toggle="collapse" data-target="#topic6" aria-expanded="false" aria-controls="topic6">
-              <td><strong><a href="theses/topic6.html" class="topic-link" target="_blank" rel="noopener noreferrer">Experiences from Chatbot Conversations in Automated Programming Assessment Systems: User Personas and Feedback Reliability</a></strong> <span class="badge badge-secondary">Assigned</span></td>
+              <td><strong><a href="theses/topic6.html" class="topic-link" target="_blank" rel="noopener noreferrer">Experiences from Chatbot Conversations in Automated Programming Assessment Systems: User Personas and Feedback Reliability</a></strong> <span class="badge-assigned">Assigned</span></td>
               <td>BSC</td>
               <td>CS</td>
             </tr>
@@ -241,7 +400,7 @@
             </td>
           </tr>
             <tr class="clickable-row" data-toggle="collapse" data-target="#topicCoffeePackaging" aria-expanded="false" aria-controls="topicCoffeePackaging">
-              <td><strong><a href="theses/topicCoffeePackaging.html" class="topic-link" target="_blank" rel="noopener noreferrer">AI-Based Recognition of Coffee Bean Packaging for Automatic Brewing Profile Retrieval</a></strong> <span class="badge badge-secondary">Assigned</span></td>
+              <td><strong><a href="theses/topicCoffeePackaging.html" class="topic-link" target="_blank" rel="noopener noreferrer">AI-Based Recognition of Coffee Bean Packaging for Automatic Brewing Profile Retrieval</a></strong> <span class="badge-assigned">Assigned</span></td>
               <td>BSC</td>
               <td>CS</td>
             </tr>
@@ -260,7 +419,7 @@
             </td>
           </tr>
             <tr class="clickable-row" data-toggle="collapse" data-target="#topicChatbot" aria-expanded="false" aria-controls="topicChatbot">
-              <td><strong><a href="theses/topicChatbot.html" class="topic-link" target="_blank" rel="noopener noreferrer">Development of a Chatbot for Assessing Code Understanding in Artemis</a></strong> <span class="badge badge-secondary">Assigned</span></td>
+              <td><strong><a href="theses/topicChatbot.html" class="topic-link" target="_blank" rel="noopener noreferrer">Development of a Chatbot for Assessing Code Understanding in Artemis</a></strong> <span class="badge-assigned">Assigned</span></td>
               <td>BSC</td>
               <td>CS</td>
             </tr>
@@ -332,7 +491,7 @@
     </section>
   </div>
 
-  <footer class="bg-light py-3">
+  <footer class="py-4">
     <p class="text-center">&copy; 2026 Eduard Frankford</p>
   </footer>
 </body>
