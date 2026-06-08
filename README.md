@@ -1,9 +1,10 @@
 # Personal Website
 https://eduardfrankford.com
 
+Static site hosted on **GitHub Pages**, served from the `master` branch root.
+Any push to `master` is published automatically.
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/e0b5b562-9b32-470c-9e35-38d96aa6eedc/deploy-status)](https://app.netlify.com/sites/eduard-frankford/deploys)
-
-
-
+## Local preview
+```
 python3 -m http.server 8080
+```
